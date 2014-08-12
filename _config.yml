@@ -10,7 +10,7 @@ title:            Python Codelabs
 tagline:          Snake charming, one step at a time. 
 url:              http://jennielees.github.io/python-codelabs/
 paginate:         1
-baseurl:          /python-codelabs/
+baseurl:          http://jennielees.github.io/python-codelabs/
 author:
   name:           Jennie Lees
   url:            https://twitter.com/jennielees
