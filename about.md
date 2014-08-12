@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: :base_url/about
+permalink: {{site.baseurl}}about
 ---
 
 <p class="message">
