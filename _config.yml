@@ -3,7 +3,7 @@ markdown:         redcarpet
 pygments:         true
 
 # Permalinks
-permalink:        /:title
+permalink:        /python-codelabs/:title
 
 # Setup
 title:            Python Codelabs
