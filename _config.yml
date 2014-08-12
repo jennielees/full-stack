@@ -4,6 +4,7 @@ pygments:         true
 
 # Permalinks
 permalink:        /python-codelabs/:title
+relative_permalinks: true
 
 # Setup
 title:            Python Codelabs
