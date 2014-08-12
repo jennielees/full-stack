@@ -1,0 +1,22 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Python Codelabs
+tagline:          Snake charming, one step at a time. 
+url:              http://jennielees.github.io/python-codelabs/
+paginate:         1
+baseurl:          /
+author:
+  name:           Jennie Lees
+  url:            https://twitter.com/jennielees
+  email:          jennielees@gmail.com
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/jennielees/python-codelabs
