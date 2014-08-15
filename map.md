@@ -4,6 +4,8 @@ title: Course Map
 permalink: map/
 ---
 
+[Installfest!]([Introducing Python](/python-codelabs/installfest)
+
 ####Week 1
 
 * [Introducing Python](/python-codelabs/introducing-python)
@@ -24,5 +26,7 @@ permalink: map/
 * The Circle of Life
 * Extra Credit
 * Week 3 Resources
+
+####Week 4
 
 
