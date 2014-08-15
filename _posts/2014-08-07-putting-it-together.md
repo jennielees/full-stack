@@ -2,8 +2,13 @@
 layout: post
 title: Putting it Together
 ---
-Data structures
-Error and exception handling
-Github
-[snippets app, saves to csv]
-[Markov chain w/ snippets app?]
+
+* Writing a snippets app
+* Discuss app design
+* Write snippets into csv
+* Loading up snippets back from the csv
+
+* Errors and exceptions
+  * Using them for good
+  
+* Possibly start hinting about databases and basic sql?

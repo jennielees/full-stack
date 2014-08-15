@@ -241,6 +241,8 @@ print "{first} {last}".format(first=first_name, last=last_name)
 
 Let's look at some real data!
 
+**Discussion:** Talking about sweep.csv and what's in it.
+
 Get the `sweep.csv` file from [here](/python-codelabs/public/data/names.txt). CSV, short for comma-separated value, is a common format and many places can give you CSV data to work with, including your friendly local spreadsheet program.
 
 * Read in the data from `sweep.csv` using `readlines()` and use `split(',')` to examine it.

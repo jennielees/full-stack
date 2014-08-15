@@ -34,3 +34,4 @@ if thing_one == thing_two:
 ```
 * Use the adjective lists to make your superhero name generator even more ridiculous. You'll need to read in a new [file](python-codelabs/public/data/heroes.txt) (or [two](python-codelabs/public/data/villains.txt)) to do it. Hint: adding `.title()` after a variable name makes it Title Case, e.g. `name.title()`.
 
+s
