@@ -4,7 +4,7 @@ title: Course Map
 permalink: map/
 ---
 
-[Installfest!]([Introducing Python](/python-codelabs/installfest)
+[Installfest!](/python-codelabs/installfest)
 
 ####Week 1
 
