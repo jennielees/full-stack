@@ -9,7 +9,7 @@ Getting ready: Make a directory somewhere you can get back to easily, calling it
 
 Let's do something more interesting than playing around with variables!
 
-First, download the [hero and villain names](/python-codelabs/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory. 
+First, download the [hero and villain names](/python-codelabs/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory. 
 
 Here are two filesystem superpowers you can try:
 
@@ -19,7 +19,7 @@ Here are two filesystem superpowers you can try:
   
 * Download it directly to the directory: open Terminal and navigate (change directory, `cd`) to your `week1` directory and then use the `curl` [command](http://en.wikipedia.org/wiki/CURL) to download it to a file:
 
-  `curl -O http://jennielees.github.io/python-codelabs/data/names.txt`
+  `curl -O http://jennielees.github.io/python-codelabs/public/data/names.txt`
 
   The `-O` means 'output to a file' so you should see a file called `names.txt` in your directory once you're done. Check by typing in `ls` to list files.
 
@@ -241,7 +241,7 @@ print "{first} {last}".format(first=first_name, last=last_name)
 
 Let's look at some real data!
 
-Get the `sweep.csv` file from [here](/python-codelabs/data/names.txt). CSV, short for comma-separated value, is a common format and many places can give you CSV data to work with, including your friendly local spreadsheet program.
+Get the `sweep.csv` file from [here](/python-codelabs/public/data/names.txt). CSV, short for comma-separated value, is a common format and many places can give you CSV data to work with, including your friendly local spreadsheet program.
 
 * Read in the data from `sweep.csv` using `readlines()` and use `split(',')` to examine it.
 * This is a nearly 40,000 line file, so let's use the `[:]` operator to access part of the list:
