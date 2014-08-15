@@ -9,9 +9,8 @@ permalink: map/
 ####Week 1
 
 * [Introducing Python](/python-codelabs/introducing-python)
-* Inside the Filing Cabinet
-* Extra Credit
-* Week 1 Resources
+* [Inside the Filing Cabinet](/python-codelabs/inside-the-filing-cabinet)
+* [Extra Credit & Week 1 Resources](/python-codelabs/week-1-extra-credit/)
 
 ####Week 2
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 1: Extra Credit
+title: Week 1 Extra Credit
 ---
 
 #### Resources
