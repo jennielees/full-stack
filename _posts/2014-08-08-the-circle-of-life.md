@@ -8,9 +8,16 @@ title: The Circle of Life
 * Testing
 * Testing
 
+
 * Unit tests and behavioural tests
+
+
+
 * Testing before you even begin
   * write a test driven extension to snippets
 
 
-* GitHub
+##### Week 3 Assessment
+
+Write a test driven extension to the snippets app. (We'll talk about some ideas in class.)
+Commit your code to GitHub and share the link with your instructor.

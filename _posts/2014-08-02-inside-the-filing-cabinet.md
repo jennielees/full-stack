@@ -117,56 +117,6 @@ Once you've cleaned up the list, let's do something with it. How about just putt
 
 (If you want to keep the original list around, you can assign the sorted version to another name.)
 
-#### Writing to a file
-
-Writing's very similar to reading. One big difference is that you have to tell Python you want to write the file; by default, `open` assumes you want to read it.
-
-
-```
->>> with open('output.txt', 'w') as f:
->>>     f.writelines(data)
-```
-
-If you open up 'output.txt' you'll notice everything's on one line. Yup, those newlines were actually pretty useful after all. Can you figure out how to write the file with newlines in it?
- 
-Warning: if you run code again with the same filename, this will replace the contents of the file. That's usually what you want to do, but Python won't warn you about it in case it isn't.
-
-#### Saving your code in a file
-
-Since we're on files, let's try getting out of the Python interpreter and putting our code in a file as well!
-
-Open up a text editor and put the file-reading code in it:
-
-```
-with open('names.txt') as f:
-    data = f.readlines()
-    
-stripped = []
-for name in data:
-    stripped.append(name.strip())
-
-data = sorted(stripped)
-
-print "The names are:"
-for name in data:
-    print name
-```
-
-Save this file with a memorable name, like `superheroes.py`. Adding '.py' to the end means it's a Python file.
-
-To run the file, switch back to your terminal and type:
-
-```
-python superheroes.py
-```
-
-If it didn't work, check the file is actually there (and your editor didn't add a second file extension like .txt on the end); that `python` by itself works; that you used consistent indentation in the file; look for typos or extra brackets.
-
-
-#### Diversion: Inception!
-
-What happens if you change the file you're reading to be `superheroes.py` instead of `names.txt`? Can the file read itself while it's running?
-
 #### Superhero Generator
 
 #####Version 1
@@ -234,56 +184,71 @@ print "{} {}".format(first_name, last_name)
 print "{first} {last}".format(first=first_name, last=last_name)
 ```
 
-**Discussion** We'll talk about printing strings out.
+**Discussion** We'll talk about printing strings out, and why you might want to care about formatting them.
 
+##### Over to You
 
-#### Comma Separated Victory
-
-Let's look at some real data!
-
-**Discussion:** Talking about sweep.csv and what's in it.
-
-Get the `sweep.csv` file from [here](/python-codelabs/public/data/names.txt). CSV, short for comma-separated value, is a common format and many places can give you CSV data to work with, including your friendly local spreadsheet program.
-
-* Read in the data from `sweep.csv` using `readlines()` and use `split(',')` to examine it.
-* This is a nearly 40,000 line file, so let's use the `[:]` operator to access part of the list:
+* Expand the superhero name generator to avoid certain names, using `if`. For example, to reject names like 'Poison Poison'. Hint: the `==` operator is used to test if two things are the same:
 
 ```
-with open('sweep.csv') as f:
+if thing_one == thing_two:
+    print "The things are the same things."
+```
+* Use the adjective lists to make your superhero name generator even more ridiculous. You'll need to read in a new [file](python-codelabs/public/data/heroes.txt) (or [two](python-codelabs/public/data/villains.txt)) to do it. Hint: adding `.title()` after a variable name makes it Title Case, e.g. `name.title()`.
+
+#### Writing to a file
+
+Writing's very similar to reading. One big difference is that you have to tell Python you want to write the file; by default, `open` assumes you want to read it.
+
+
+```
+>>> with open('output.txt', 'w') as f:
+>>>     f.writelines(data)
+```
+
+If you open up 'output.txt' you'll notice everything's on one line. Yup, those newlines were actually pretty useful after all. Can you figure out how to write the file with newlines in it?
+ 
+Warning: if you run code again with the same filename, this will replace the contents of the file. That's usually what you want to do, but Python won't warn you about it in case it isn't.
+
+Write a superhero name to a file.
+
+#### Bonus: Saving your code in a file
+
+Since we're on files, let's try getting out of the Python interpreter and putting our code in a file as well!
+
+Open up a text editor and put the file-reading code in it:
+
+```
+with open('names.txt') as f:
     data = f.readlines()
+    
+stripped = []
+for name in data:
+    stripped.append(name.strip())
 
-for line in data[:3]:
-    print line.split(',')
+data = sorted(stripped)
+
+print "The names are:"
+for name in data:
+    print name
 ```
 
-`data[:3]` accesses the part of the list from items 0 to 3, which is a bit more manageable.
+Save this file with a memorable name, like `names.py`. Adding '.py' to the end means it's a Python file.
 
-This method works for a 'clean' CSV, but .csv files are so common and varied that Python has a way of accessing them more easily, to deal with different standards. For example, the `split` call above fails if there is a comma inside one of the items.
-
-```
-import csv
-
-with open('sweep.csv') as f:
-    reader = csv.reader(f)
-    for row in reader:
-        print row
-```
-
-If you want to access a subset of this data, you'll need to load it into a new list first.
-
-Using this data (either method), let's see if we can figure out the most popular day of the week for street sweeping. In the individual rows, this is the second item (`row[1]`).
-
-One way to do this would be to use a variable for each day.
+To run the file, switch back to your terminal and type:
 
 ```
-monday = 0
-tuesday = 0
-...
-
-if row[2] == "Mon":
-    monday += 1
+python names.py
 ```
 
-`+=` is a shortcut for a variable adding 1 to itself.
+If it didn't work, check:
 
-We'll discuss more about this dataset next week: think of interesting things you might want to do with it!
+* Is the file actually there?
+* Did your editor add a second file extension like .txt on the end? (If so, remove it!)
+* Does `python` by itself work?
+* Did you use consistent indentation in the file? Look for typos or extra brackets.
+
+
+#### Diversion: Inception!
+
+What happens if you change the file you're reading to be `names.py` instead of `names.txt`? Can the file read itself while it's running?
