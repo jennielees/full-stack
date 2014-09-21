@@ -1,0 +1,22 @@
+.letmein input {
+  font-size: 30px;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid;
+  font-family: 'PT Serif';
+}
+
+.letmein button {
+  font-size: 24px;
+  border: 0;
+  background: #ac4142;
+  border-radius: 4px;
+  width: 2.25rem;
+  color: white;
+}
+
+#incorrect {
+  display:none;
+  color: #ac4142;
+  }

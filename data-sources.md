@@ -27,3 +27,18 @@ Interesting data sets:
 * [Google N-grams](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html)
 * Your own bank transactions
 * Your own contacts and social network connections
+
+Really well-designed and fun APIs:
+
+* Twilio
+* Stripe
+* Mandrill
+* Twitter
+* Foursquare?
+* Shopify?
+* google maps
+* FIND ONE - Translator API
+* Spotify
+* FIND MUSIC API
+* http://dev.mashery.com/iodocs
+* https://www.goodreads.com/api

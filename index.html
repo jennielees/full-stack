@@ -1,38 +1,59 @@
 ---
-layout: default
-title: Home
+layout: gate
+title: Index
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-	    <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+<div class="letmein">
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
+    <p>You need the password to continue.</p>
+
+    <input id="letmeinpass" type="text">
+
+    <button type="submit" value="submit" id="letmeingo">&#9654;</button>
+
+    <div id="incorrect">
+      <small>
+      sorry, wrong password.. :-(
+      </small>
+    </div>
+
 </div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
 
+<script>
+  function checkPass() {
+    var value = $('#letmeinpass').val();
+    console.log("checking password");
+    console.log(sha256_digest(value));
+    var sha = sha256_digest(value);
+    if (sha == 'c39006dae3d2cc34b14c7b9ae77812f6ffa97892b0c53932aea9cdbebb014c75' || sha == '9e93b77959228983f8bed7aab7440f6277d2dd17c60b4ea0dec179ed09ec4133') {
+      console.log("correct password");
+      $.cookie("password", 1);
+      window.location.href='{{site.baseurl}}/map';
+    }
+    if (sha == 'b5beb35d79007f63bf1029e61b635d309eca02ac0c5459ee691c53a35e0089fa') {
+      console.log("admin password");
+      $.cookie("password", 1);
+      $.cookie("admin", 1);
+      window.location.href='{{site.baseurl}}/admin';
+      }
+
+    // otherwise, incorrect
+
+    $('#incorrect').fadeIn(500);
+  }
+
+  $('#letmeinpass').keypress(function(e) {
+    if (e.which == 13) {
+      checkPass();
+    } else {
+      $('#incorrect').hide();
+    }
+  });
+
+  $('#letmeingo').click(function() {
+    checkPass();
+  });
+
+</script>

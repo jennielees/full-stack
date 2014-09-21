@@ -1,13 +1,13 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments 
+highlighter:      pygments
 
 # Permalinks
 permalink:        :title
 
 # Setup
 title:            Python Codelabs
-tagline:          Snake charming, one step at a time. 
+tagline:          Hackbright Back-End Web Development
 url:              http://jennielees.github.io/python-codelabs/
 paginate:         1
 baseurl:          /python-codelabs
@@ -20,3 +20,6 @@ author:
 version:          1.0.0
 github:
   repo:           https://github.com/jennielees/python-codelabs
+
+leftCurleys: "{{"
+rightCurleys: "}}"

@@ -18,4 +18,4 @@ title: Delicious Soup
 
 [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/) is a Lewis Carroll-inspired screen scraping library.
 
-[Intro to Beautiful Soup](http://programminghistorian.org/lessons/intro-to-beautiful-soup) is a beautiful guide, so we won't re-tread its ground here.
+[Intro to Beautiful Soup](http://programminghistorian.org/lessons/intro-to-beautiful-soup) is a beautiful guide, so we won't re-tread its ground here.	

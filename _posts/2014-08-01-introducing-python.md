@@ -3,8 +3,6 @@ layout: post
 title: Introducing Python
 ---
 
-
-
 ####Hello, Python
 
 Open up a terminal window.

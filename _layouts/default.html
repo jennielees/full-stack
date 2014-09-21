@@ -3,8 +3,13 @@
 
   {% include head.html %}
 
-  <body class="theme-base-0d">
+  <script>
+    if ($.cookie("password") != 1) {
+      window.location.href = '{{site.baseurl}}/';
+    }
+  </script>
 
+  <body class="theme-base-08">
     {% include sidebar.html %}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
