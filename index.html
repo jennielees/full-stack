@@ -3,6 +3,13 @@ layout: gate
 title: Index
 ---
 
+<script>
+  if (window.location.href != 'http://labs.bewd.co') {
+    console.log(window.location.href);
+    window.location.replace('http://labs.bewd.co');
+  }
+</script>
+
 
 <div class="letmein">
 
@@ -24,7 +31,7 @@ title: Index
   <h3>Getting the password</h3>
 
 <pre><code data-trim class="python">$ mkdir hackbright
-$ curl http://labs.bewd.co/test.py
+$ curl -O http://labs.bewd.co/test.py
 $ python test.py
 </pre></code>
 
@@ -35,6 +42,7 @@ $ python test.py
 
 
 <script>
+
   function checkPass() {
     var value = $('#letmeinpass').val();
     console.log("checking password");

@@ -8,9 +8,9 @@ permalink:        :title
 # Setup
 title:            Python Codelabs
 tagline:          Hackbright Back-End Web Development
-url:              http://jennielees.github.io/python-codelabs/
+url:              labs.bewd.co
 paginate:         1
-baseurl:          /python-codelabs
+baseurl:          
 author:
   name:           Jennie Lees
   url:            https://twitter.com/jennielees
@@ -20,6 +20,3 @@ author:
 version:          1.0.0
 github:
   repo:           https://github.com/jennielees/python-codelabs
-
-leftCurleys: "{{"
-rightCurleys: "}}"

@@ -10,7 +10,7 @@ Getting ready: Make a directory somewhere you can get back to easily, calling it
 
 Let's do something more interesting than playing around with variables!
 
-First, download the [hero and villain names](/python-codelabs/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory.
+First, download the [hero and villain names](/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory.
 
 Here are two filesystem superpowers you can try:
 
@@ -20,9 +20,9 @@ Here are two filesystem superpowers you can try:
 
 * Download it directly to the directory: open Terminal and navigate (change directory, `cd`) to your `week1` directory and then use the `curl` [command](http://en.wikipedia.org/wiki/CURL) to download it to a file:
 
-  `curl -O http://jennielees.github.io/python-codelabs/public/data/names.txt`
+  `curl -O http://labs.bewd.co/public/data/names.txt`
 
-  The `-O` means 'output to a file' so you should see a file called `names.txt` in your directory once you're done. Check by typing in `ls` to list files.
+  The `-O` means 'output to a file with the same name' so you should see a file called `names.txt` in your directory once you're done. Check by typing in `ls` to list files.
 
 Once you have `names.txt` handy and you are in a terminal, open up Python again (just type `python`).
 
@@ -195,7 +195,7 @@ print "{first} {last}".format(first=first_name, last=last_name)
 if thing_one == thing_two:
     print "The things are the same things."
 ```
-* Use the adjective lists to make your superhero name generator even more ridiculous. You'll need to read in a new [file](python-codelabs/public/data/heroes.txt) (or [two](python-codelabs/public/data/villains.txt)) to do it. Hint: adding `.title()` after a variable name makes it Title Case, e.g. `name.title()`.
+* Use the adjective lists to make your superhero name generator even more ridiculous. You'll need to read in a new [file](/public/data/heroes.txt) (or [two](/public/data/villains.txt)) to do it. Hint: adding `.title()` after a variable name makes it Title Case, e.g. `name.title()`.
 
 #### Writing to a file
 
