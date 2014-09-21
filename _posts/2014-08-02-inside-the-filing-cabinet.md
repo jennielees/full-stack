@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Inside the Filing Cabinet
+week: 1
 ---
 
 Getting ready: Make a directory somewhere you can get back to easily, calling it something like `hackbright`, then make a `week1` subdirectory for this week's projects.
@@ -9,14 +10,14 @@ Getting ready: Make a directory somewhere you can get back to easily, calling it
 
 Let's do something more interesting than playing around with variables!
 
-First, download the [hero and villain names](/python-codelabs/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory. 
+First, download the [hero and villain names](/python-codelabs/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory.
 
 Here are two filesystem superpowers you can try:
 
-* Open up Terminal and move it from there! 
- 
+* Open up Terminal and move it from there!
+
   `mv ~/Downloads/names.txt .` is shorthand for "move the file called 'names.txt' in my Downloads folder, within my home directory (`~`) to the directory I am currently in (`.`)"
-  
+
 * Download it directly to the directory: open Terminal and navigate (change directory, `cd`) to your `week1` directory and then use the `curl` [command](http://en.wikipedia.org/wiki/CURL) to download it to a file:
 
   `curl -O http://jennielees.github.io/python-codelabs/public/data/names.txt`
@@ -41,7 +42,7 @@ Notice how there is a colon at the end of the 'with' line, and the line below is
 
 Welcome to Python.
 
-This structure is called a 'block' and is used everywhere in Python. Literally. Everywhere. 
+This structure is called a 'block' and is used everywhere in Python. Literally. Everywhere.
 
 **Discussion:** We'll talk more about blocks and indentation in class.
 
@@ -59,7 +60,7 @@ Ugh! Let's break down what that output was. You probably saw something like this
 
 First things first, `\n`. This is a special character for the 'newline', marking that the next thing printed should be at the start  of the next line. When you read in a file, especially with `readlines`, you often get these pesky newlines sticking around. Don't worry though, Python has many ways to get rid of them!
 
-Secondly, the square brackets. 
+Secondly, the square brackets.
 
 This is a Python **list**. Lists are super useful and crop up a lot. It's pretty much what it sounds like: a list of stuff.
 
@@ -101,10 +102,10 @@ Let's try:
 ```
 >>> for name in data:
 >>>     name = name.strip()
->>> 
+>>>
 >>> print data
 ```
- 
+
 Huh?
 
 **Discussion:** We'll talk about _scopes_ and how the `for` keyword works.
@@ -207,7 +208,7 @@ Writing's very similar to reading. One big difference is that you have to tell P
 ```
 
 If you open up 'output.txt' you'll notice everything's on one line. Yup, those newlines were actually pretty useful after all. Can you figure out how to write the file with newlines in it?
- 
+
 Warning: if you run code again with the same filename, this will replace the contents of the file. That's usually what you want to do, but Python won't warn you about it in case it isn't.
 
 Write a superhero name to a file.
@@ -221,7 +222,7 @@ Open up a text editor and put the file-reading code in it:
 ```
 with open('names.txt') as f:
     data = f.readlines()
-    
+
 stripped = []
 for name in data:
     stripped.append(name.strip())

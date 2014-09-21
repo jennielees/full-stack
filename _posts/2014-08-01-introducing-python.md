@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introducing Python
+week: 1
 ---
 
 ####Hello, Python
@@ -12,10 +13,10 @@ Type in `python`.
 You'll get something that looks like this:
 
 ```
-Python 2.7.6 (default, Feb 20 2014, 22:44:16) 
+Python 2.7.6 (default, Feb 20 2014, 22:44:16)
 [GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
->>> 
+>>>
 ```
 
 (If you don't, flag down a TA!)
@@ -38,7 +39,7 @@ Get Python to tell you:
 
 Actually, you don't really need to know that it's called "true division", it's really just "division". But this is an annoying little thing that trips people up all the time. (By the way, [Joy Division](https://www.youtube.com/watch?v=zuuObGsB0No) are fab. Check them out sometime.)
 
-Let's consider the following question: 
+Let's consider the following question:
 
 **How many MUNI rides can I take before my Clipper card is empty?**
 
@@ -73,7 +74,7 @@ Hint: you can press the up arrow to find something you previously typed.
 
 Do the math in your head. What's Python doing?
 
-What if the clipper balance isn't a round number, like $20.14? 
+What if the clipper balance isn't a round number, like $20.14?
 
 Round numbers are called 'integers' or `int` in code, and decimal numbers with something after the point are called 'floating-point' or `float`. The point is 'floating' because there can be any number of things to the right of it.
 

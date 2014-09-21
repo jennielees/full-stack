@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Week 1 Extra Credit
+week: 1
 ---
 
 #### Resources
@@ -22,7 +23,7 @@ title: Week 1 Extra Credit
 * Figure out (or remember) how to make and remove directories on the command line.
 
 * Work through [The Way of the Program](http://interactivepython.org/runestone/static/thinkcspy/GeneralIntro/introduction.html).
-  * Review questions: 
+  * Review questions:
     * What is a programming language?
     * What is an algorithm?
     * What is a function?

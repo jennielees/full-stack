@@ -3,12 +3,6 @@
 
   {% include head.html %}
 
-  <script>
-    if ($.cookie("password") != 1) {
-      window.location.href = '{{site.baseurl}}/';
-    }
-  </script>
-
   <body class="theme-base-08">
     {% include sidebar.html %}
 
@@ -18,7 +12,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-		       <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+		  <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
           </h3>
         </div>

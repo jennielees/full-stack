@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Putting it Together
+week: 3
 ---
 
 #### Snippets: stage one of the robot brain
@@ -33,7 +34,7 @@ Why bother with this? It's possible to develop without `logging`, but you'll fin
 
 * Function to put a snippet to a csv
 * Command line arguments: Design interface with class
-* input() 
+* input()
 * Input parser
 * Main function
 * 'Test' function that prints out the csv contents
@@ -45,5 +46,5 @@ Why bother with this? It's possible to develop without `logging`, but you'll fin
 
 * Errors and exceptions
   * Using them for good
-  
+
 * Possibly start hinting about databases and basic sql?

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fun with Data
+week: 2
 ---
 
 
@@ -52,14 +53,14 @@ import csv
 neighborhoods = []
 
 with open('sweep.csv') as f:
-    
+
     reader = csv.reader(f)
-    
+
     for row in reader:
-        
-        neighborhood = row[-2] 
+
+        neighborhood = row[-2]
         # Negative means count from the right, which is easier here
-        
+
         if neighborhood not in neighborhoods:
             # Append it to the list!
             neighborhoods.append(neighborhood)
@@ -125,7 +126,7 @@ As well as your usual file viewers, see if you can figure out what these command
 
 **Discussion:** Functions and parameters.
 
-We'll talk about [functions](http://www.learnpython.org/en/Functions), but at the highest level, they are a really good way of wrapping up some code in a neat bundle to run again or re-use. 
+We'll talk about [functions](http://www.learnpython.org/en/Functions), but at the highest level, they are a really good way of wrapping up some code in a neat bundle to run again or re-use.
 
 What does a function look like? With one, your code can move from
 
@@ -143,7 +144,7 @@ to:
 def do_this():
     do this
     do that
-    
+
 do_this()
 do_this()
 do_this()
@@ -184,7 +185,7 @@ print_hello("Benedict Cumberbatch")
 
 What happens if you put a number instead of a string? What if you don't put anything?
 
-##### An argumentative interruption 
+##### An argumentative interruption
 
     A: Your function takes a parameter?
        How strange, mine takes an argument!
@@ -233,7 +234,7 @@ When you run your program itself, it has parameters! The system incantation `sys
 
 ```
 python myfile.py one two three
-       ^^^^^^^^^^^^^^^^^^^^^^^ 
+       ^^^^^^^^^^^^^^^^^^^^^^^
        these are all arguments to the 'python' command!
 ```
 

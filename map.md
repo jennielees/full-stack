@@ -1,29 +1,29 @@
 ---
-layout: page
+layout: map
 title: Course Map
-permalink: map/
+permalink: old-map/
 ---
 
-[Installfest!](/python-codelabs/installfest)
-[Glossary and Resources](/python-codelabs/glossary-resources)
+[Installfest!](../installfest)
+[Glossary and Resources](../glossary-resources)
 
 ####Week 1
 
-* [Introducing Python](/python-codelabs/introducing-python)
-* [Inside the Filing Cabinet](/python-codelabs/inside-the-filing-cabinet)
-* [Extra Credit & Week 1 Resources](/python-codelabs/week-1-extra-credit/)
+* [Introducing Python](../introducing-python)
+* [Inside the Filing Cabinet](../inside-the-filing-cabinet)
+* [Extra Credit & Week 1 Resources](../week-1-extra-credit/)
 
 ####Week 2
 
-* [Fun with Data](/python-codelabs/fun-with-data)
-* [Structure and Chaos](/python-codelabs/structure-and-chaos)
-* [Extra Credit & Week 2 Resources](/python-codelabs/week-2-extra-credit)
+* [Fun with Data](../fun-with-data)
+* [Structure and Chaos](../structure-and-chaos)
+* [Extra Credit & Week 2 Resources](../week-2-extra-credit)
 
 ####Week 3
 
-* [Putting it Together](/python-codelabs/putting-it-together)
-* [The Circle of Life](/python-codelabs/the-circle-of-life)
-* [Extra Credit & Week 3 Resources](/python-codelabs/week-3-extra-credit)
+* [Putting it Together](../putting-it-together)
+* [The Circle of Life](../the-circle-of-life)
+* [Extra Credit & Week 3 Resources](../week-3-extra-credit)
 
 ####Week 4
 
@@ -64,6 +64,3 @@ permalink: map/
 
 * Mashup Briefing
 * Project Resources
-
-
-

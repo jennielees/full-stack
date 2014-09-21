@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Structure and Chaos
+week: 2
 ---
 
 
@@ -15,7 +16,7 @@ A dictionary is Python's term for a key-value store, and it's just as it sounds:
 A simple dictionary (or 'dict' for short) looks like this:
 
 ```
-leet_skillz = { 
+leet_skillz = {
     'halo': 10,
     'starcraft': 4,
     'hearthstone': 7,
@@ -56,7 +57,7 @@ best_game_ever = "dominion"
 leet_skills[best_game_ever] = 4
 ```
 
-Why do we use dictionaries? 
+Why do we use dictionaries?
 
 For one, they make it much easier to lump data together and access it with a friendly name. There are also a lot of places where you want to keep track of two (or more) things at once, and a dictionary saves you from trying to keep track of where you are in a bunch of different lists. Thanks, dictionaries!
 
@@ -108,17 +109,17 @@ days_counts = {
 Hints:
 
 ```
-days_counts[row['WEEKDAY']] 
+days_counts[row['WEEKDAY']]
 # will get you days_counts['Mon'] if row['WEEKDAY'] is 'Mon', and so on.
 
-days_counts.get(key, 0) 
+days_counts.get(key, 0)
 # will give you the value if it's there, and 0 if it isn't.
 
 ```
 
 #### It's date time!
 
-Write a function that takes a street name and tells you if it is going to be swept tomorrow. 
+Write a function that takes a street name and tells you if it is going to be swept tomorrow.
 
 *Note: when you make a million on the App Store from this, just remember who suggested it...*
 
@@ -126,7 +127,7 @@ Write a function that takes a street name and tells you if it is going to be swe
 
 Time to meet the delight that is `datetime` in Python.
 
-`datetime` is both a module and a class within a module, which is a fancy way of saying you need to incant `from datetime import datetime` to use it. 
+`datetime` is both a module and a class within a module, which is a fancy way of saying you need to incant `from datetime import datetime` to use it.
 
 It's a very powerful module that gives you a lot of access to date and time functionality, but for now we care about a few small things.
 

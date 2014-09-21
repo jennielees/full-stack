@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Week 2 Extra Credit
+week: 2
 ---
 
 #### Resources
@@ -41,20 +42,19 @@ Here's a helper if you need it:
 ```
 def split_street(street_address):
     first_space = street_address.find(" ")
-    print "The first space in this string is at {}".format(first_space)    
-    
+    print "The first space in this string is at {}".format(first_space)
+
     thing_before_space = street_address[:first_space]
     thing_after_space = street_address[first_space:]
     # these selectors cut the array up at the appointed index.
-    
+
     return (thing_before_space, thing_after_space)
     # Using a tuple (a, b) means the function can
     # return more than one thing at once!
-    
+
 (left, right) = split_street("683 Sutter St")
 # and this is how you access the two values.
 
 print left
 print right
 ```
- 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Circle of Life
+week: 3
 ---
 
 * Testing

@@ -20,3 +20,7 @@
   display:none;
   color: #ac4142;
   }
+
+body {
+  background: url('../hb60.png') fixed 99% 1% no-repeat;
+}
