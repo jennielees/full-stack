@@ -1,109 +1,140 @@
 ---
 layout: map
-title: Course Map
+title: Map
 ---
 
   <p>
     <a href="../installfest">Installfest!</a>
-    <a href="../glossary-resources">Glossary and Resources</a>
   </p>
 
-  <div class="week" data-week='1'>
-    <h4>Week 1</h4>
+    <div class="map">
 
-    <ul>
-      <li><a href="../introducing-python">Introducing Python</a></li>
-      <li><a href="../inside-the-filing-cabinet">Inside the Filing Cabinet</a></li>
-      <li><a href="../week-1-extra-credit/">Extra Credit &amp; Week 1 Resources</a></li>
-    </ul>
+    <div class="week locked" data-week='1'>
+      <h4>Week 1</h4>
+
+      <ul>
+        <li><a href="../introducing-python">Introducing Python</a></li>
+        <li><a href="../inside-the-filing-cabinet">Inside the Filing Cabinet</a></li>
+        <li><a href="../week-1-extra">Extra Credit &amp; Week 1 Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='2'>
+
+      <h4>Week 2</h4>
+
+      <ul>
+        <li><a href="../fun-with-data">Fun with Data</a></li>
+        <li><a href="../structure-and-chaos">Structure and Chaos</a></li>
+        <li><a href="../week-2-extra">Extra Credit &amp; Week 2 Resources</a></li>
+      </ul>
+
+    </div>
+
+    <div class="week locked" data-week='3'>
+
+      <h4>Week 3</h4>
+
+      <ul>
+        <li><a href="../putting-it-together">Putting it Together</a></li>
+        <li><a href="../the-circle-of-life">The Circle of Life</a></li>
+        <li><a href="../week-3-extra">Extra Credit &amp; Week 3 Resources</a></li>
+      </ul>
+
+    </div>
+
+    <div class="week locked" data-week='4'>
+
+      <h4>Week 4</h4>
+
+      <ul>
+        <li><a href="../front-back-middle">Frontend, Backend, Middleware</a></li>
+        <li><a href="../dealing-with-data">Dealing with Data</a></li>
+        <li><a href="../week-4-extra">Extra Credit &amp; Week 4 Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='5'>
+
+      <h4>Week 5</h4>
+
+      <ul>
+        <li><a href="../a-restful-interlude">A RESTful interlude</a></li>
+        <li><a href="../whats-in-an-api">What&#39;s in an API?</a></li>
+        <li><a href="../week-5-extra">Extra Credit &amp; Week 5 Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='6'>
+
+      <h4>Week 6</h4>
+
+      <ul>
+        <li><a href="../all-your-database">All Your Database Are Belong To Us</a></li>
+        <li><a href="../persistence-pays-off">Persistence Pays Off</a></li>
+        <li><a href="../week-6-extra">Extra Credit &amp; Week 6 Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='7'>
+
+      <h4>Week 7</h4>
+
+      <ul>
+        <li><a href="../ditching-the-cursor">Ditching the Cursor</a></li>
+        <li><a href="../data-meet-cloud">Data, Meet Cloud</a></li>
+        <li><a href="../week-7-extra">Extra Credit &amp; Week 7 Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='8'>
+
+      <h4>Week 8</h4>
+
+      <ul>
+        <li><a href="../apps-scripts-and-snobbery">Apps, Scripts and Snobbery</a></li>
+        <li><a href="../design-thinking">Design Thinking</a></li>
+        <li><a href="../week-8-extra">Extra Credit &amp; Week 8 Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='9'>
+
+      <h4>Weeks 9 &amp; 10</h4>
+
+      <ul>
+        <li><a href="../mashup-briefing">Mashup Briefing</a></li>
+        <li><a href="../project-resources">Project Resources</a></li>
+      </ul>
+
+    </div>
+
   </div>
 
-  <div class="week" data-week='2'>
+  <script>
+  // Set active state based on whether weeks are locked.
 
-    <h4>Week 2</h4>
+  function updateStatusUI(status) {
+    $.each(status.weeks, function(index, week) {
+      console.log(week);
+      if (week) {
+        console.log("Week " + week.week + " : " + week.locked);
+        if (!week.locked) {
+          $('[data-week=' + week.week + ']').removeClass('locked');
+        } else {
+          $('[data-week=' + week.week + ']').addClass('locked');
+        }
+      }
+    });
+  };
 
-    <ul>
-      <li><a href="../fun-with-data">Fun with Data</a></li>
-      <li><a href="../structure-and-chaos">Structure and Chaos</a></li>
-      <li><a href="../week-2-extra-credit">Extra Credit &amp; Week 2 Resources</a></li>
-    </ul>
+  fb.on('value', function (snapshot) {
+    weekstatus = snapshot.val();
+    console.log(snapshot.val());
+    updateStatusUI(snapshot.val());
+  }, function (errorObject) {
+      console.log('The read failed: ' + errorObject.code);
+    });
 
-  </div>
 
-  <div class="week" data-week='3'>
-
-    <h4>Week 3</h4>
-
-    <ul>
-      <li><a href="../putting-it-together">Putting it Together</a></li>
-      <li><a href="../the-circle-of-life">The Circle of Life</a></li>
-      <li><a href="../week-3-extra-credit">Extra Credit &amp; Week 3 Resources</a></li>
-    </ul>
-
-  </div>
-
-  <div class="week" data-week='4'>
-
-    <h4>Week 4</h4>
-
-    <ul>
-      <li>Frontend, Backend, Middleware</li>
-      <li>Dealing with Data</li>
-      <li>Extra Credit &amp; Week 4 Resources</li>
-    </ul>
-  </div>
-
-  <div class="week" data-week='5'>
-
-    <h4>Week 5</h4>
-
-    <ul>
-      <li>A RESTful interlude</li>
-      <li>What&#39;s in an API?</li>
-      <li>Extra Credit &amp; Week 5 Resources</li>
-    </ul>
-  </div>
-
-  <div class="week" data-week='6'>
-
-    <h4>Week 6</h4>
-
-    <ul>
-      <li>All Your Database Are Belong To Us</li>
-      <li>Persistence Pays Off</li>
-      <li>Extra Credit &amp; Week 6 Resources</li>
-    </ul>
-  </div>
-
-  <div class="week" data-week='7'>
-
-    <h4>Week 7</h4>
-
-    <ul>
-      <li>Ditching the Cursor</li>
-      <li>Data, Meet Cloud</li>
-      <li>Extra Credit &amp; Week 7 Resources</li>
-    </ul>
-  </div>
-
-  <div class="week" data-week='8'>
-
-    <h4>Week 8</h4>
-
-    <ul>
-      <li>Apps, Scripts and Snobbery</li>
-      <li>Design and Optimization</li>
-      <li>Extra Credit &amp; Week 8 Resources</li>
-    </ul>
-  </div>
-
-  <div class="week" data-week='9'>
-
-    <h4>Weeks 9 &amp; 10</h4>
-
-    <ul>
-      <li>Mashup Briefing</li>
-      <li>Project Resources</li>
-    </ul>
-
-  </div>
+  </script>

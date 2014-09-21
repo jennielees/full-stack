@@ -5,27 +5,19 @@ permalink: about/
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  "Run a program, and solve your problems today.<br/> Learn how to code, and solve all your future problems too."
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+This is the codelab part of the "Back-End Web Development" [Hackbright](http://www.hackbrightacademy.com) part-time class. Originally written Sept 2014.
 
-There are currently two themes built on Poole:
+## Site Implementation
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+This site is powered by [Jekyll](http://jekyllrb.com) and hosted for free on [GitHub Pages](https://pages.github.com). The theme is [Lanyon](https://github.com/poole/lanyon).
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+The main content of the course is written in [Markdown](http://daringfireball.net/projects/markdown/syntax).
+To submit corrections, open a [pull request](https://github.com/jennielees/python-codelabs/) on GitHub. You may need to request access
+to the repository.
 
-## Setup
+Customizations and live features are powered by [Firebase](http://www.firebase.com).
 
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+<small>Author: [Jennie Lees](http://twitter.com/jennielees), Sept 2014.</small>

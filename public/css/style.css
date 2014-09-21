@@ -24,3 +24,24 @@
 body {
   background: url('../hb60.png') fixed 99% 1% no-repeat;
 }
+
+.map .locked h4 {
+  color: #ddd;
+}
+
+.sidebar-divider {
+  height: 5em;
+  border-top: 1px solid rgba(255,255,255,.1); 
+}
+
+.map .locked a {
+  pointer-events: none !important;
+  cursor: default;
+  color: #eee;
+}
+
+.pagination a.locked {
+  pointer-events: none !important;
+  cursor: default;
+  color: gray;
+}

@@ -3,8 +3,9 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }} | {{ page.week }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-week">Week {{page.week}}</span>
+  <p></p>
   {{ content }}
 </div>
 
@@ -14,6 +15,30 @@ layout: default
 <div class="pagination">
     <a class="pagination-item older" href="{{ site.baseurl }}/map">Course Map</a>
   {% if page.next.url %}
-      <a class="pagination-item newer" href="{{site.baseurl}}{{page.next.url}}">Next: Week {{page.next.week}} {{page.next.title}}</a>
+      <a class="pagination-item newer locked" data-week={{page.next.week}} href="{{site.baseurl}}{{page.next.url}}">{{page.next.title}}</a>
   {% endif %}
 </div>
+
+<script>
+// Set active state based on whether weeks are locked.
+
+function updateStatusUI(status) {
+  $.each(status.weeks, function(index, week) {
+    if (week) {
+      if (!week.locked) {
+        $('[data-week=' + week.week + ']').removeClass('locked');
+      }
+    }
+  });
+};
+
+fb.on('value', function (snapshot) {
+  weekstatus = snapshot.val();
+  console.log(snapshot.val());
+  updateStatusUI(snapshot.val());
+}, function (errorObject) {
+    console.log('The read failed: ' + errorObject.code);
+  });
+
+
+</script>

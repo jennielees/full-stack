@@ -4,7 +4,7 @@ title: Introducing Python
 week: 1
 ---
 
-####Hello, Python
+###Hello, Python
 
 Open up a terminal window.
 
@@ -19,14 +19,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-(If you don't, flag down a TA!)
+(If you don't, head back to the [Installfest](../installfest) and ask for help!)
 
 You can type anything in here and Python will try to immediately run it. For example, try typing in:
 
 ```
 >>> 3 + 4
 ```
-(Note: Where you see `>>>` here, that represents the prompt from Python. Don't type the arrows in.)
+(Note: Where you see `>>>` here, that represents the prompt from Python. Don't type the arrows in. Whenever you see code like this from here on out, you should be typing it into Python, not just reading it.)
 
 What do you get? What if you change the spacing around? Can you do other math operations? ([Wikibooks](http://en.wikibooks.org/wiki/Python_Programming/Operators) might be helpful.)
 
@@ -35,17 +35,17 @@ Get Python to tell you:
 * How many seconds are in a year
 * Your lucky number (your zipcode plus your birth month squared)
 
-#####Interlude: True Division Is Not A Band
+####True Division Is Not A Band
 
-Actually, you don't really need to know that it's called "true division", it's really just "division". But this is an annoying little thing that trips people up all the time. (By the way, [Joy Division](https://www.youtube.com/watch?v=zuuObGsB0No) are fab. Check them out sometime.)
+Actually, you don't really need to know that it's called "true division", it's really just "division". But this is an annoying little thing that trips me up all the time. (By the way, [Joy Division](https://www.youtube.com/watch?v=zuuObGsB0No) are fab. Check them out sometime.)
 
 Let's consider the following question:
 
 **How many MUNI rides can I take before my Clipper card is empty?**
 
-The MUNI fare just increased (or should have), so this seems pretty obvious.
+The MUNI fare just increased, making this a slightly harder calculation and a perfect illustration of true division. How convenient!
 
-Let's say my Clipper balance is $25:
+Let's say my Clipper balance is $25. Tell Python by typing:
 
 ```
 >>> clipper = 25
@@ -57,14 +57,14 @@ And rides cost $2.25 each.
 >>> fare = 2.25
 ```
 
-To get the number of rides it's simple napkin math:
+To get the number of rides it's simple napkin math, using the `/` (division) symbol -- Python doesn't know what &#247; means.
 
 ```
 >>> clipper / fare
 ```
-This should print out a number, but it's pretty ugly. And unrealistic: you can't take point zero whatever of a MUNI ride (try explaining that to the driver...)
+This should print out a number, but it's pretty ugly. And unrealistic: you can't take 0.11111... of a MUNI ride (try explaining that to the driver...)
 
-Here's some Python fun: what if we go back to the old $2 fare?
+Here's some Python fun: what if we go back to the old $2 fare? (I wish.)
 
 ```
 >>> fare = 2
@@ -72,9 +72,9 @@ Here's some Python fun: what if we go back to the old $2 fare?
 ```
 Hint: you can press the up arrow to find something you previously typed.
 
-Do the math in your head. What's Python doing?
+Do the math in your head. It's the wrong answer... what's Python doing?
 
-What if the clipper balance isn't a round number, like $20.14?
+What if the Clipper balance isn't a round number, like $20.14?
 
 Round numbers are called 'integers' or `int` in code, and decimal numbers with something after the point are called 'floating-point' or `float`. The point is 'floating' because there can be any number of things to the right of it.
 
@@ -88,7 +88,7 @@ Try turning your integers into floats and running the exact same code:
 
 Anything different? What if you only do one at a time? What do you think is happening here?
 
-####A variable by any other name
+###A variable by any other name
 
 See how above we didn't have to type out the Clipper value multiple times? We've sneakily used a thing called a *variable*. Variables are really important in Python: they're how you store stuff so you can do stuff to it later. Think of them like named boxes where data lives. All you have to do is mention the name and you get access to everything in the box.
 
@@ -118,7 +118,7 @@ You can also explicitly tell Python to `print` something out. This works with a 
 
 Do brackets and spacing make a difference?
 
-####Bad Things Can Happen
+###Bad Things Can Happen
 
 Like running out of Clipper cash before the last MUNI ride home.
 
@@ -172,7 +172,7 @@ Try running this on a balance just above 5:
 ```
 We'll come back to `if` later. Try writing another `if` to print a more menacing message if the balance goes below zero.
 
-####Let's break things
+###Let's break things
 
 Prize for the most interesting error message! We'll walk through the errors together and explain what Python is trying to do.
 

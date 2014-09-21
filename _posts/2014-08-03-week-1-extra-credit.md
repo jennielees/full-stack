@@ -2,6 +2,7 @@
 layout: post
 title: Week 1 Extra Credit
 week: 1
+permalink: week-1-extra/
 ---
 
 #### Resources

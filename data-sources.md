@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: map
 title: Data Sources
 permalink: data-sources/
 ---
