@@ -19,7 +19,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-(If you don't, head back to the [Installfest](../installfest) and ask for help!)
+If you don't, head back to the [Installfest](../installfest) and ask for help!
+
+Note: To quit Python, type `exit()` or hit Ctrl-D.
 
 You can type anything in here and Python will try to immediately run it. For example, try typing in:
 
