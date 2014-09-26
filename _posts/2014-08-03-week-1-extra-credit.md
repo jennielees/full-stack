@@ -18,6 +18,16 @@ permalink: week-1-extra/
 * [Learn Python the Hard Way: Numbers and Math](http://learnpythonthehardway.org/book/ex3.html)
 * [Learning Python: Scopes](https://www.inkling.com/read/learning-python-mark-lutz-4th/chapter-17/python-scope-basics)
 
+#### Exercises
+
+Want more practice? Try the 'extra credit' section below, or work through
+
+* [Hackbright: Conditionals: Make a guessing game](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise01)
+* [Hackbright: Math and Functions](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise02)
+
+Both of these point to some resources you can work through first, though we've already covered some of that material, so try reading through the exercise first and going to the extra resources if you need them.
+
+
 #### Extra Credit
 
 * Write a script to calculate your remaining MUNI rides given your Clipper balance as input.
