@@ -231,6 +231,9 @@ print "{first} {last}".format(first=first_name, last=last_name)
 if thing_one == thing_two:
     print "The things are the same things."
 ```
+
+* Make sure your superhero name generator is inside a function, and figure out how you can make sure it *always* prints out a name, even if the first one it picked was rejected. At this point you might want to skip on down a bit and figure out how to put your code in a file, to save all that typing.
+
 * Use the adjective lists to make your superhero name generator even more ridiculous. You'll need to read in a new [file](/public/data/heroes.txt) (or [two](/public/data/villains.txt)) to do it. Hint: adding `.title()` after a variable name makes it Title Case, e.g. `name.title()`.
 
 #### Writing to a file
