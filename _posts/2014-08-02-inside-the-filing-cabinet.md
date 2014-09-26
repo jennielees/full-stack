@@ -64,7 +64,11 @@ Secondly, the square brackets.
 
 This is a Python **list**. Lists are super useful and crop up a lot. It's pretty much what it sounds like: a list of stuff.
 
-**Discussion:** We'll talk about lists in class, and what you can and can't do with them.
+**Discussion:** We'll talk about lists in class, and what you can and can't do with them. 
+
+##### Listacular!
+
+**GOTO**: Head over to [Learn Python the Hard Way](http://learnpythonthehardway.org/book/ex32.html) and work through 32, 33 and 34 (hit 'Next' to the right). This will get you more familiar with lists... and you'll be using them a lot!
 
 One thing you can do with a list is **loop through it**:
 
@@ -110,6 +114,12 @@ Huh?
 
 **Discussion:** We'll talk about _scopes_ and how the `for` keyword works.
 
+What's going on here is that you are putting something new inside `name`, but `name` only exists within the `for` loop, so when you are done, the original `data` hasn't changed.
+
+Tricky? Yeah.
+
+[Learn Python the Hard Way 38](http://learnpythonthehardway.org/book/ex38.html) and [Learning Python](https://www.inkling.com/read/learning-python-mark-lutz-4th/chapter-17/python-scope-basics) for more context on this.
+
 Once you've cleaned up the list, let's do something with it. How about just putting it in alphabetical order?
 
 ```
@@ -133,6 +143,8 @@ print uppers
 j_position = uppers.find('J')
 ```
 
+You might need to rename some of the things here to make it work with the variables you are using, like `name`.
+
 What do you think `find` does? Why is `j_position` 9 and not 10?
 
 **Discussion:** We'll discuss strings, and talk about what "import" means.
@@ -146,7 +158,7 @@ print list[2]
 print list[3]
 ```
 
-Lists start counting at zero.
+Lists start counting at zero. (Hey, does that explain why finding 'J' in a list of 'A, B, C, D')
 
 How can you put this together with the `data` list you already have to find the right item?
 
@@ -164,6 +176,30 @@ name_pieces = name.split(" ")
 print name_pieces
 first_name = name_pieces[0]
 ```
+
+###### Putting it together
+
+Now you need to turn your original list of names into two lists of first and last names.
+
+One way to do this is to create new lists outside your `for` loop:
+
+```
+first_names = []
+last_names = []
+```
+
+Within your `for` loop you will need to put the two halves of `name_pieces` into the right list.
+
+Hint: What does this code do?
+
+```
+list = []
+list.append('a')
+list.append('b')
+print list
+```
+
+###### Randomness
 
 Once you have two lists, you need to pick randomly from each one.
 
@@ -189,7 +225,7 @@ print "{first} {last}".format(first=first_name, last=last_name)
 
 ##### Over to You
 
-* Expand the superhero name generator to avoid certain names, using `if`. For example, to reject names like 'Poison Poison'. Hint: the `==` operator is used to test if two things are the same:
+* Expand the superhero name generator to avoid certain names, using `if`. For example, to reject names like 'Poison Poison'. Hint: the `==` operator is used to test if two things are the same, and yes, the extra `=` matters!
 
 ```
 if thing_one == thing_two:

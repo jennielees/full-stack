@@ -16,6 +16,7 @@ permalink: week-1-extra/
 * [Wikibooks: Files](http://en.wikibooks.org/wiki/A_Beginner's_Python_Tutorial/File_I/O)
 * [Command Line Basics](https://gist.github.com/aviflombaum/9d6f7448119bae3a24ee)
 * [Learn Python the Hard Way: Numbers and Math](http://learnpythonthehardway.org/book/ex3.html)
+* [Learning Python: Scopes](https://www.inkling.com/read/learning-python-mark-lutz-4th/chapter-17/python-scope-basics)
 
 #### Extra Credit
 

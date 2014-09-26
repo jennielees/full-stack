@@ -139,10 +139,15 @@ Let's define a _function_ to take money off my card. The `def` (short for 'defin
 
 ```
 >>> def take_a_ride(start_balance):
->>>     new_balance = start_balance - fare
->>>     return new_balance
->>>
+...     new_balance = start_balance - fare
+...     return new_balance
+...
 ```
+
+Spot the extra blank line at the bottom! This is really important and tells Python that you are done with the `def` part. You should see the left side change from `...` to `>>>` when you are outside the `def`.
+
+Also, notice there are **four blank spaces** at the start of the second and third lines. This is also really important! Python uses spacing to know when you are done with a statement.
+
 This doesn't do anything immediately but let's see what happens when we try using it:
 
 ```
