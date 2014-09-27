@@ -7,6 +7,8 @@ permalink: week-2-extra/
 
 ### Resources
 
+_Feel free to go through these resources to get extra clarification or practice with a topic at any time._
+
 Lists and Loops
 
 * [Khan Academy video on lists](https://www.youtube.com/watch?v=zEyEC34MY1A)
