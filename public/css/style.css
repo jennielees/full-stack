@@ -45,3 +45,35 @@ body {
   cursor: default;
   color: gray;
 }
+
+pre.hint {
+  color: rgb(249,249,249);
+  height: 55px;
+  overflow: hidden;
+  -o-transition: none;
+  -ms-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  }
+ 
+pre.hint::before {
+  content: "Show me!";
+  font-style: italic;
+  color: rgb(81,81,81);
+  }
+
+pre.hint:hover {
+  color: rgb(81,81,81);
+  height: auto;
+  -o-transition: all .5s;
+  -ms-transition:all .5s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  }
+
+pre.hint:hover::before {
+  content: none;
+  }
+

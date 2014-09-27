@@ -5,8 +5,12 @@ week: 2
 permalink: week-2-extra/
 ---
 
-#### Resources
+### Resources
 
+* [Khan Academy video on lists](https://www.youtube.com/watch?v=zEyEC34MY1A)
+* [Codecademy: lists](http://www.codecademy.com/courses/python-beginner-en-pwmb1/0/1?curriculum_id=4f89dab3d788890003000096)
+* [Control Flow: If and For](http://www.swaroopch.com/notes/python/#control_flow)
+* [Codecademy: Loops](http://www.codecademy.com/courses/python-beginner-en-cxMGf/0/1?curriculum_id=4f89dab3d788890003000096)
 * [Python CSV official documentation](https://docs.python.org/2/library/csv.html)
 * [Python Module of the Week: CSV](http://pymotw.com/2/csv/)
 * [Codecademy: Functions](http://www.codecademy.com/courses/python-beginner-c7VZg/0/1?curriculum_id=4f89dab3d788890003000096)
@@ -18,13 +22,13 @@ permalink: week-2-extra/
 * (Advanced) [Khan Academy: Recursive Fibonacci](https://www.youtube.com/watch?v=urPVT1lymzU&index=18&list=PL36E7A2B75028A3D6)
 * (Advanced) [Lambda Tutorial](http://pythonconquerstheuniverse.wordpress.com/2011/08/29/lambda_tutorial/)
 
-#### Extra Credit
+### Extra Credit/Further Exercises
 
-* What is loosely coupled code? Why might it be a good idea? When is it a bad idea?
+* Exercise to get more practice with files, loops, and lists: [Count the letters in a file](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise05).
 
 * What does `if __name__=="__main__"` do? [Why](http://stackoverflow.com/a/20158605/3508332)?
 
-Street Sweeping
+####Street Sweeping Extensions
 
 * Extend your `sweep_times` function to take a street number and name, e.g. `sweep_times(683, "Sutter St")`.
 

@@ -7,9 +7,11 @@ week: 2
 
 #### Dictionary Corner
 
-**Discussion:** What's a dictionary? When is it used? What parallels does it have to other things (e.g. Javascript/JSON)?
+What's a dictionary? When is it used? What parallels does it have to other things (e.g. Javascript/JSON)?
 
-Keys and values crop up all over the world of programming, so you've probably seen something similar before, even if you didn't realise it.
+Check out [this piece on dictionaries](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise06) to find out this, and more. We'll discuss in class, too.
+
+Keys and values crop up all over the world of programming, so you've probably seen something similar already, even if you didn't realise it.
 
 A dictionary is Python's term for a key-value store, and it's just as it sounds: a way to map *key* terms into *values*.
 

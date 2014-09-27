@@ -17,7 +17,10 @@ permalink: week-1-extra/
 * [Command Line Basics](https://gist.github.com/aviflombaum/9d6f7448119bae3a24ee)
 * [Learn Python the Hard Way: Numbers and Math](http://learnpythonthehardway.org/book/ex3.html)
 * [Learning Python: Scopes](https://www.inkling.com/read/learning-python-mark-lutz-4th/chapter-17/python-scope-basics)
-* 
+* [Khan Academy video on lists](https://www.youtube.com/watch?v=zEyEC34MY1A)
+* [Codecademy: lists](http://www.codecademy.com/courses/python-beginner-en-pwmb1/0/1?curriculum_id=4f89dab3d788890003000096)
+* [Control Flow: If and For](http://www.swaroopch.com/notes/python/#control_flow)
+* [Codecademy: Loops](http://www.codecademy.com/courses/python-beginner-en-cxMGf/0/1?curriculum_id=4f89dab3d788890003000096)
 
 #### Exercises
 

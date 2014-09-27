@@ -1,6 +1,8 @@
 # Dependencies
 markdown:         redcarpet
 highlighter:      pygments
+gems:
+- jemoji
 
 # Permalinks
 permalink:        :title
