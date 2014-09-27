@@ -60,7 +60,7 @@ Extra
 
 * Update `sweep_day` to return a `True` or `False` value.
 
-* Take a command line argument and break out the house number from the street name, calling `sweep_day` with these and tomorrow's day and week number. Take the result you get back from `sweep_day` and print an appropriate message.
+* Take a command line argument (remember `argv`?) and break out the house number from the street name, calling `sweep_day` with these and tomorrow's day and week number. Take the result you get back from `sweep_day` and print an appropriate message.
 
 Here's a helper if you need it:
 
@@ -83,3 +83,29 @@ def split_street(street_address):
 print left
 print right
 ```
+
+* Update `sweep_day` to allow other ways of typing the day name. Helper:
+
+```
+>>> if 'mon' in 'monday':
+...     print 'found'
+...
+>>> dayname = 'Mon'
+>>> longname = 'monday'
+>>> print dayname.lower()
+>>> print longname.lower()
+>>> if dayname in longname:
+...    print 'found'
+...
+>>> if dayname.lower() in longname.lower():
+...    print 'found when I checked lowercase'
+...
+
+```
+
+* Use the `raw_input()` function to get input from a user instead of a command line argument. It helps if you've done the piece before, as you can't expect users to always put 'Mon' for 'Monday'!
+
+  Intros to `raw_input()`:
+
+  * [Hackbright Guessing Game](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise01)
+  * [Learn Python The Hard Way: raw_input](http://learnpythonthehardway.org/book/ex11.html)
