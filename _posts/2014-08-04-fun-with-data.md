@@ -194,9 +194,11 @@ print sorted(neighborhoods)
 
 _You can also call them neighbourhoods if you are so inclined. :wink:_
 
-What's going on here?
+What's going on here? Add `print` statements to get more insight.
 
 What is in `neighborhoods`?
+
+Notice how we said explicitly at the beginning that `neighborhoods` was an empty list. This means we can put stuff in it (using `append`) and that it will stick around after our indented code is finished.
 
 ### When is SF at its cleanest?
 
