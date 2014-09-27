@@ -7,17 +7,35 @@ permalink: week-2-extra/
 
 ### Resources
 
+Lists and Loops
+
 * [Khan Academy video on lists](https://www.youtube.com/watch?v=zEyEC34MY1A)
 * [Codecademy: lists](http://www.codecademy.com/courses/python-beginner-en-pwmb1/0/1?curriculum_id=4f89dab3d788890003000096)
-* [Control Flow: If and For](http://www.swaroopch.com/notes/python/#control_flow)
 * [Codecademy: Loops](http://www.codecademy.com/courses/python-beginner-en-cxMGf/0/1?curriculum_id=4f89dab3d788890003000096)
+
+If
+
+* [Control Flow: If and For](http://www.swaroopch.com/notes/python/#control_flow)
+* [Codecademy: Control flow](http://www.codecademy.com/courses/python-beginner-BxUFN/0/1?curriculum_id=4f89dab3d788890003000096)
+
+CSV
+
 * [Python CSV official documentation](https://docs.python.org/2/library/csv.html)
 * [Python Module of the Week: CSV](http://pymotw.com/2/csv/)
 * [Codecademy: Functions](http://www.codecademy.com/courses/python-beginner-c7VZg/0/1?curriculum_id=4f89dab3d788890003000096)
+
+Functions
+
 * [Learn Python the Hard Way: Functions](http://learnpythonthehardway.org/book/ex18.html)
+
+Dictionaries
+
 * [Hackbright: Dictionaries](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise06)
 * [Learn Python the Hard Way: Dictionaries](http://learnpythonthehardway.org/book/ex39.html) (last section is advanced)
 * [Hackbright: files and dictionaries](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise07)
+
+Extra
+
 * [Codecademy: Datetime](http://www.codecademy.com/courses/python-beginner-en-zFPOx/0/1)
 * (Advanced) [Khan Academy: Recursive Fibonacci](https://www.youtube.com/watch?v=urPVT1lymzU&index=18&list=PL36E7A2B75028A3D6)
 * (Advanced) [Lambda Tutorial](http://pythonconquerstheuniverse.wordpress.com/2011/08/29/lambda_tutorial/)
