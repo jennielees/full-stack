@@ -263,20 +263,59 @@ Let's move on to look for a specific piece of information.
 
 Also known as "Getting down with `if`".
 
-Update `sweep.py` to print out answers to the following questions.
-
-* Find your street name (or a street you like)
-* Which day(s) of the week is your street swept?
-* Which week(s) of the month?
-* Can you identify which day your specific section of the  street is swept? (The columns `LF_FADD` and `LF_TOADD` specify left-side from and to numbers; `RF_FADD` and `RF_TOADD` similarly the right-side.)
-
-Explore the file a little before trying to answer these questions. It always helps to be able to answer them without a program, or at least have some idea how!
+Update `sweep.py` to print out answers to the following questions. 
+Explore the file a little before trying to answer the questions. It always helps to be able to answer them without a program, or at least have some idea how!
 
 As well as your usual file viewers, see if you can figure out what these commands do in Terminal:
 
 * `grep Sutter sweep.csv`
 * `grep Sutter sweep.csv | less` (hit space to continue, or q to exit)
 
+#### Exploring Questions
+
+* Find your street name (or a street you like, eg Sutter St!)
+* Which day(s) of the week is your street swept?
+* Which week(s) of the month?
+* Can you identify which day your specific section of the  street is swept? (The columns `LF_FADD` and `LF_TOADD` specify left-side from and to numbers; `RF_FADD` and `RF_TOADD` similarly the right-side. You might also need to look near the start of the row for the side of the street that this row is talking about.)
+  * **Note on comparing numbers to strings - don't! :)**
+  
+  
+      `LF_FADD` is a _string_, ie. something like `'301'`. If you try to compare this to a _number_, like `301` (no quotes!) it won't work:
+  
+      ```
+  >>> 301 == '301
+  >>> 301 == 301
+      ```
+  
+      How do you fix this? One option is to figure out the right block numbers for your street and compare the strings:
+  
+      ```
+  left_from = row[14]
+  left_to   = row[15]
+  if left_from == '301' and left_to == '399':
+      print 'They are the same'
+      ```
+       
+      Another option (more advanced) is to convert the `left_from` and `left_to` variables to numbers, but since this is Real Data, it's messy and doesn't always work. So we need to _try_ converting it and see if it works (we'll cover this more later, trust me.)
+     
+      
+      ```
+      # ... [ this goes inside your for loop ] ...
+    
+      try:
+          left_from = int(row[14])
+          left_to   = int(row[15])
+      except:
+          print "This row has some weird data! Boo!"
+          continue
+      
+      # ... [ if you got to this point in the code, then left_from and left_to now have numbers in them] ...
+      
+      if left_from < 400 and left_to > 300:
+          print 'I am on my block'
+      ```
+  
+      The `continue` will go back through the `for` loop again and skip the row with bad data.
 
 ### Fun with functions
 
