@@ -157,13 +157,49 @@ with open('sweep.csv') as f:
         print row
 ```
 
-Notice how `csv.reader` got rid of those pesky newlines?
+Notice how `csv.reader` got rid of those pesky newlines? There are no `\n` characters hanging about!
 
+"OMG IT PRINTED A WHOLE BUNCH OF STUFF": It was supposed to. The code above says "With the file sweep.csv open, make a CSV reader and print every row it has". Our file has a **lot** of rows.
+
+How could you fix this?
+
+<pre class="hint">
+```
+import csv
+
+max_rows_to_print = 5
+rows_printed = 0
+
+with open('sweep.csv') as f:
+    reader = csv.reader(f)
+    for row in reader:
+		if rows_printed < max_rows_to_print: 
+            print row
+            rows_printed += 1
+```
+</pre>
 
 Experimenting:
 
-* How much is the `reader` object like a list? Can you access row 30 of the reader? (What happens if you try `reader[30]`?)
+* How much is the `reader` object like a list? Can you access row 30 of the reader? (What happens if you try `reader[30]`?
 * Is the `row` object like a list? Can you access item 5 of a row? (What happens if you try `row[5]`?)
+
+<pre class="hint">
+You need to try:
+
+print reader[30]
+
+inside your file, if you're using a file.
+
+This won't work. See below for why not.
+
+However, the other one:
+
+print row[5]
+
+should work just fine. It prints the thing at position 5 (in Python speak, remember the first one is 0) for every row.
+</pre>
+
 
 **Iterators**: The `reader` object is a special kind of [iterator](http://anandology.com/python-practice-book/iterators.html), and not the same as a list. It behaves a lot like a list, but for example, you can only loop through it once. If you want to access this data separately, such as from another for loop, you'll need to load it into a new list first. This is often a good point to pull out the parts of the data you actually want.
 
