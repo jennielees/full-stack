@@ -4,13 +4,19 @@ title: Putting it Together
 week: 3
 ---
 
-#### Snippets: stage one of the robot brain
+## Snippets: stage one of the robot brain
 
 We're going to build an app to keep track of useful code snippets. Hopefully this will even turn out to be something you actively use!
 
+### Git 'er done
+
+Let's learn a bit about Git! 
+
+
+
 Create a new `snippets` directory, and `git init` a new git repository.
 
-##### Logging: it's like spying but legal
+### Logging: it's like spying but legal
 
 The `logging` module makes it easier to see what's going on in our script.
 
@@ -28,7 +34,7 @@ This means that any DEBUG level (or higher) messages will get written to 'output
 
 Why bother with this? It's possible to develop without `logging`, but you'll find yourself with a bunch of `print` statements that you're constantly commenting out. Best to use `logging` and handle it properly.
 
-##### Constructing the snippets app
+### Constructing the snippets app
 
 **Discussion**: App design and brief.
 

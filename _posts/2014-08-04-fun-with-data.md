@@ -102,7 +102,7 @@ As you probably spotted from the last entry above, the numbers in a slice must b
 When using negative indices, an easy way to think of them is that Python counts how many items are in the list, and translates the negative into the real position you meant. So if your list has 7 items and you are asking for item -1, Python translates that into asking for item 6.
 
 ```
->>> mylist = ['a','b','c','d','e','f']
+>>> mylist = ['a','b','c','d','e','f','g']
 >>> mylist[-1]
 >>> mylist[-3]
 >>> mylist[-3:-6]
