@@ -296,7 +296,7 @@ As well as your usual file viewers, see if you can figure out what these command
       `LF_FADD` is a _string_, ie. something like `'301'`. If you try to compare this to a _number_, like `301` (no quotes!) it won't work:
   
       ```
-  >>> 301 == '301
+  >>> 301 == '301'
   >>> 301 == 301
       ```
   
