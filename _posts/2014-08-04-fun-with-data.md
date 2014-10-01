@@ -164,7 +164,6 @@ Notice how `csv.reader` got rid of those pesky newlines? There are no `\n` chara
 How could you fix this?
 
 <pre class="hint">
-```
 import csv
 
 max_rows_to_print = 5
@@ -176,7 +175,21 @@ with open('sweep.csv') as f:
 		if rows_printed < max_rows_to_print: 
             print row
             rows_printed += 1
-```
+</pre>
+
+Another way using `reader`'s special `line_num` variable, which keeps track of the current line it is reading, in just the same way as adding 1 to `rows_printed`.
+
+<pre class="hint">
+import csv
+
+max_rows_to_print = 5
+rows_printed = 0
+
+with open('sweep.csv') as f:
+    reader = csv.reader(f)
+    for row in reader:
+		if reader.linenum < max_rows_to_print: 
+            print row
 </pre>
 
 Experimenting:
