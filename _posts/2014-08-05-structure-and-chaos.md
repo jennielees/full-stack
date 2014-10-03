@@ -6,6 +6,8 @@ week: 2
 
 ### Fun with functions
 
+_[Code from class walkthrough](https://gist.github.com/jennielees/d62581b38499ddc38266)_
+
 We've already seen [functions](http://www.learnpython.org/en/Functions) around, but let's get more familiar with them.
 
 What's a function? In short, they are a really good way of wrapping up some code in a neat bundle to run again or re-use.
