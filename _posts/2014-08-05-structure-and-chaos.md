@@ -195,7 +195,7 @@ Values can be any kind of Python data type, and we'll see more complex examples 
 How do you use this? Finding an element is similar to a list, but with a string key, not an integer:
 
 ```
-print leet_skills['simcity']
+print leet_skillz['simcity']
 ```
 
 You can also use the `get()` function which behaves itself much more nicely if the key isn't actually there.
