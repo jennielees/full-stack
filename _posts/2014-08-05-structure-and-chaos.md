@@ -158,13 +158,60 @@ What happens when you run it like above?
 
 How would you get at the argument 'one' in the example?
 
+<pre class="hint">
+import sys
+
+print sys.argv[1]
+
+my_street = sys.argv[1]
+</pre>
+
 Can you extend your `sweep_times` file to take a command line argument, e.g.
 
 ```
 python sweep.py "Sutter St"
 ```
 
+<pre class="hint">
+import sys
+
+print sys.argv[1]
+
+my_street = sys.argv[1]
+
+...
+...
+...
+
+check_street(my_street)
+</pre>
+
+What happens if you forget the street name? How could you use `except` to exit gracefully in this case?
+
+<pre class="hint">
+import sys
+
+try:
+    my_street = sys.argv[1]
+except:
+    print "!! I need a street name !!"
+    exit()
+    
+# following code won't get run if you exit()
+</pre>
+
 What happens if you forget the quotes?
+
+<pre class="hint">
+import sys
+
+print sys.argv
+# if you run (from Terminal)
+# python sweep.py Sutter St
+# you should see
+# ['sweep.py', 'Sutter', 'St'] in the list
+# argv looks for spaces and will split up things that aren't in quotes!
+</pre>
 
 ### Dictionary Corner
 
