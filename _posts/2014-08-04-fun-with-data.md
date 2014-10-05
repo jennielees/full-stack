@@ -268,7 +268,7 @@ if row[1] == "Mon":
 
 `+=` is a shortcut for a variable adding 1 to itself, instead of typing `monday = monday + 1`.
 
-Do you notice anything slow, or error-prone about this approach?
+Do you notice anything slow, or error-prone about this approach? There should be a lot of `if` statements, which may have been tedious to write out. Check your code [against this solution](https://gist.github.com/jennielees/72029eadf4a58221a980).
 
 Let's move on to look for a specific piece of information.
 
