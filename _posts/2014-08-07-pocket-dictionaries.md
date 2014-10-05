@@ -4,7 +4,7 @@ title: Pocket Dictionaries
 week: 3
 ---
 
-### Dictionary Corner
+## Dictionary Corner
 
 What's a dictionary? When is it used? What parallels does it have to other things (e.g. Javascript/JSON)?
 
@@ -79,7 +79,7 @@ for game in leet_skillz:
    print "My skill level is {}".format(skill) 
 ```
 
-#####Why do we use dictionaries?
+####Why do we use dictionaries?
 
 For one, they make it much easier to lump data together and access it with a friendly name. Unlike lists, they don't commit you to defining (or knowing) the size or position of elements, which makes things much easier on-the-fly.
 
@@ -88,9 +88,9 @@ There are also a lot of places where you want to keep track of two (or more) thi
 More dictionary practice: [Learn Python the Hard Way](http://learnpythonthehardway.org/book/ex39.html) and [Codecademy](http://www.codecademy.com/courses/python-beginner-en-pwmb1/2/1). 
 _The Codecademy exercise starts with lists, so you may have already done all or some of it._
 
-### Piratical Diction
+## Piratical Diction
 
-####Pirate BARRRRRtender
+###Pirate BARRRRRtender
 
 **Practices: dictionaries, functions, raw_input**
 
@@ -98,7 +98,7 @@ To get really down and dirty with functions and dictionaries, let's create a new
 
 The bartender will invent a new and delicious cocktail for you based upon your answers to some simple questions.
 
-#####Create questions and ingredient dictionaries
+####Create questions and ingredient dictionaries
 
 The bartender should ask questions that determine your tastes and then identify ingredients to suit those tastes. If you like you can use the example bartender below, but feel free to customize!
 
@@ -120,7 +120,7 @@ ingredients = {
 }
 ```
 
-#####Write a function to ask what style of drink a customer likes.
+####Write a function to ask what style of drink a customer likes.
 
 * The function should ask each of the questions in the `questions` dictionary, and gather the responses in a new dictionary. 
 * The new dictionary should contain the type of ingredient (for example `"salty"`, or `"sweet"`), mapped to a Boolean (True or False) value. 
@@ -129,7 +129,7 @@ ingredients = {
 
 You can use the `raw_input` function to get an answer from the landlubber... er, customer. This [exercise](http://learnpythonthehardway.org/book/ex11.html) is a good introduction (or reminder).
 
-#####Write a function to construct a drink
+####Write a function to construct a drink
 
 * The function should take the preferences dictionary created in the first function as a parameter. 
 * Inside the function you should create an empty list to represent the drink. 
@@ -146,7 +146,7 @@ beatles = ["John", "Paul", "George", "Ringo"]
 print random.choice(beatles)
 ```
 
-####Provide a main function
+###Provide a main function
 
 Use `if __name__ == '__main__':` to run this function from the command line. The `main()` function should call your two functions in order, passing your list of preferences to the drink creation function. It should then print out the contents of the drink.
 
@@ -170,21 +170,21 @@ If this is getting odd results make sure that *all* your other code is inside fu
 
 To run the file, it's just `python bartender.py` (or whatever you called it).
 
-####Discussion
+###Discussion
 Once you've completed the basic requirements for the project, feel free to take a look at [this sample solution](https://gist.github.com/jennielees/af968ee8b13805a350b8). Compare and contrast your solution. What do you like better about the sample? What do you like better about yours?
 
-####Extra challenges!
+###Extra challenges!
 If you found completing the basic requirements fairly straightforward then you should try to extend your app to add the following features:
 
-#####Push to version control
+####Push to version control
 Use Git to save your bartender file and push it to GitHub. If you skipped the pre-work, now might be a good time to [spend 15 minutes on Try Git](https://try.github.io/levels/1/challenges/1). Ask the instructor/TA if you aren't sure what to do, or if you want them to check you pushed to GitHub correctly.
 
-#####Give the cocktails a name
+####Give the cocktails a name
 All good cocktails should have a memorable name. Try to write a function which will name your cocktails. The name should be a random combination of an adjective and a noun (for example your bartender could make a "Fluffy Chinchilla", a "Salty Sea-Dog", or a "Fluffy Sea-Dog"). Think back to the superheroes, though you can use lists or dictionaries in the code for the adjectives and nouns.
 
-#####Keep 'em coming
+####Keep 'em coming
 At the moment you can only get one drink at a time from the bartender. A well trained pirate bartender should offer his customer another drink when they've finished their previous one. Try adding a loop in the main function which will ask the customer whether they want another drink, and keep creating new recipes as long as they agree.
 
-#####Stock control
+####Stock control
 
 Even pirate bars don't have a limitless supply of ingredients. You could add a stock count for each ingredient which decreases whenever the bartender makes a drink. Print a message to tell the bartender to restock the ingredients when supplies are low.

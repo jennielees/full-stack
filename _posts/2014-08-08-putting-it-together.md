@@ -4,7 +4,7 @@ title: Putting it Together
 week: 3
 ---
 
-### DictReader, csv.reader's mortal enemy
+## DictReader, csv.reader's mortal enemy
 
 Now we know all about dictionaries, we can make working with CSV files a lot more interesting. Well, a little more interesting. Move over `csv.reader`, we've got a new BFF.
 
@@ -73,13 +73,13 @@ days_counts[row['WEEKDAY']]
 
 Here's an [example version](https://gist.github.com/jennielees/b6efcdcdec4822b78d0c) of the street counts using a dictionary; feel free to check your work against it and ask the instructor about any differences you see. Uncomment the `print` statements for more insight into what's going on.
 
-### It's date time!
+## It's date time!
 
 Goal: Let's write a function that takes a street name and tells you if it is going to be swept tomorrow. To start with, we will ignore the weeks of the month and just look at the day.
 
 *Note: when you make a million on the App Store from this, just remember who suggested it...*
 
-#### Knowing when we are right and wrong
+### Knowing when we are right and wrong
 
 Before we jump into this function, let's set up what we want to do. You should already have a function that takes a street name and prints out when it is swept. Start from there (or compare your code to [this dictionary version](https://gist.github.com/jennielees/74b73e0978f27ab211b0)).
 
@@ -118,7 +118,7 @@ result = swept_tomorrow("Coral Rd", 87)
 print "If tomorrow is Monday, this should be True: {}".format(result)
 ```
 
-### Knowing whether it's today or tomorrow
+## Knowing whether it's today or tomorrow
 
 Time to meet the delight that is `datetime` in Python.
 
@@ -158,7 +158,7 @@ Conveniently, the `%a` formatter, for 'abbreviated day of week', is the same for
 
 You can get more hands-on with `datetime` with [this Codecademy exercise](http://www.codecademy.com/courses/python-beginner-en-zFPOx/0/1).
 
-#### Sweeping Today
+### Sweeping Today
 
 Before we move on to tomorrow, let's get our sweep on. Write a function that tells you if the block is swept today.
 
@@ -196,7 +196,7 @@ print "If today is Thursday, this should be False: {}".format(result)
 
 Check your work against [this](https://gist.github.com/jennielees/e71d772eb88be631b865) version.
 
-### Tomorrow
+## Tomorrow
 
 The `datetime` module's `timedelta` is really handy if we want to add times to dates (or subtract).
 
@@ -227,7 +227,7 @@ day_to_check = tomorrow_day()
 print day_to_check
 ```
 
-#### Sweeping Tomorrow
+### Sweeping Tomorrow
 
 Build on what you just did with `sweep_today`. Given a street name, and house number, tell me whether it's going to be swept tomorrow. You can change your `sweep_today` function or rename it to something more general, like `sweep_day`.
 
@@ -236,7 +236,7 @@ Build on what you just did with `sweep_today`. Given a street name, and house nu
 **Next**: Head to Extra Credit and work on more extensions to street sweeping, or find a CSV file of your own and play around with that.
 
 
-### A CSV of your own
+## A CSV of your own
 
 Pick a CSV of your own to work with. Explore it the same way you did the street sweeping data, and work with the instructor/TA to identify a small script you could write to use the data.
 
