@@ -135,7 +135,7 @@ BASE_URL = 'http://api.wunderground.com/api/YOUR_API_KEY_GOES_HERE/conditions/q/
 
 def get_api_url(state, city):
     city = city.replace(" ", "_")
-    return "{}/{}/{}".format(BASE_URL, state, city)
+    return "{}/{}/{}.json".format(BASE_URL, state, city)
     
 # test
 print get_api_url("CA", "San Francisco")
