@@ -11,7 +11,7 @@ So far we've written several isolated functions that do cool things. Now we're g
 Create a new function that generates random (real) place names using `random.choice`. You can start with a list, for example:
 
 ```
-source_places = [ (New York, NY), (San Francisco, CA), (Seattle, WA), (Houston, TX) ]
+source_places = [ ('New York', 'NY'), ('San Francisco', 'CA'), ('Seattle', 'WA'), ('Houston', 'TX') ]
 ```
 
 Notice how each of the elements in this list looks a bit funky? This is a [tuple](http://openbookproject.net/thinkcs/python/english3e/tuples.html). A tuple is just a fixed, comma-separated list of values. You can access elements in a tuple like you can a list:
