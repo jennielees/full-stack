@@ -55,9 +55,13 @@ A lot of this will make much more sense when you start actually using APIs, so l
 
 We can use the [requests](http://docs.python-requests.org/en/latest/user/quickstart/) library in Python to call an API.
 
-First install pip. [Go here and follow the instructions](http://pip.readthedocs.org/en/latest/installing.html) -- download `get-pip.py` and then run `python get-pip.py`. You may need to run `sudo python get-pip.py` (to run as administrator).
+We will take this opportunity to install `pip` and `virtualenv` so we can use the wide variety of Python libraries out there!
 
-To install it, go to Terminal and type
+[Go here for context and instructions](http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) (thanks, Alice!)
+
+To install `pip`, [go here and follow the instructions](http://pip.readthedocs.org/en/latest/installing.html) -- download `get-pip.py` and then run `python get-pip.py`. You may need to run `sudo python get-pip.py` (to run as administrator).
+
+To install the requests library, go to Terminal and type
 
 ```
 $ pip install requests
