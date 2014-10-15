@@ -98,12 +98,12 @@ To access a part of the response, we use the `json()` method to convert the JSON
 
 It's often helpful to look at the [API documentation](http://www.wunderground.com/weather/api/d/docs?d=data/conditions) and, if possible, access the API directly using `curl` or a browser -- so we know which fields we want to get out.
 
-When we do this for this example, we can see there are a whole bunch of fields that we probably don't care much about, but there is one interesting-looking one: `temperature_string`. We can also see this is nested inside `current_conditions`.
+When we do this for this example, we can see there are a whole bunch of fields that we probably don't care much about, but there is one interesting-looking one: `temperature_string`. We can also see this is nested inside `current_observation`.
 
 ```
 j = r.json()
 
-temperature = j['current_conditions']['temperature_string']
+temperature = j['current_observation']['temperature_string']
 print temperature
 ```
 
