@@ -3,11 +3,6 @@
 
   {% include head.html %}
 
-<script>
-  if ($.cookie("password") != 1) {
-    window.location.href = '{{site.baseurl}}/map/';
-  }
-</script>
 
   <script src="{{ site.baseurl }}/public/js/sha256.js"></script>
 
