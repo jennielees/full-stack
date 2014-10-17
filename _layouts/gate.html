@@ -4,7 +4,7 @@
   {% include head.html %}
 
 <script>
-  if ($.cookie("password") == 1) {
+  if ($.cookie("password") != 1) {
     window.location.href = '{{site.baseurl}}/map/';
   }
 </script>
