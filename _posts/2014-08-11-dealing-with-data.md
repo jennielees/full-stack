@@ -97,7 +97,7 @@ Expand the function to take a message and a phone number, so it looks something 
 def text_this(number, message):
    # ... sends a message to the number supplied
    # returns True if the message sent OK
-   # and False if the message failed for some reason
+   # and False if there was an exception
 ```
 
 Right now, this function should return False if you use any number you didn't verify.
