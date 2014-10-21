@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Week 4 Extra Credit
-week: 4
-permalink: week-4-extra/
+title: Week 5 Extra Credit
+week: 5
+permalink: week-5-extra/
 ---
 
 See individual pages for resource links.
@@ -14,8 +14,6 @@ See individual pages for resource links.
 * Can you write a function that answers the question: "Do I need an umbrella tomorrow morning?"
 
 ### Other APIs
-
-_Sneak preview of Week 5 content!_
 
 * Using the [GitHub API](https://developer.github.com/v3/repos/#list-user-repositories):
   * print out a user's repositories given their username
