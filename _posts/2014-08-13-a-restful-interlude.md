@@ -86,12 +86,12 @@ Turn this into a function called `make_tweet(status_message, auth)`.
 * Check if your Twitter app has permission to actually post tweets. Go to [apps.twitter.com](http://apps.twitter.com) and go to the 'Permissions' tab for your app. Make sure [Read and Write](/public/twitter_perms.png) is set.
 * Check you authorized the app you are using, if you switched accounts:
  
-  You do **not** need to create a new app - you can use the same app (and therefore the same `CLIENT_KEY` and `CLIENT_SECRET` as before). But you **do** need to generate a new authorization for the new user by generating a new `access.json` file:
+    You do **not** need to create a new app - you can use the same app (and therefore the same `CLIENT_KEY` and `CLIENT_SECRET` as before). But you **do** need to generate a new authorization for the new user by generating a new `access.json` file:
 
-    ```
-    $ mv access.json access_oldaccount.json
-    $ python twitter_oauth.py
-    ```
+```
+$ mv access.json access_oldaccount.json
+$ python twitter_oauth.py
+```
     
 * Try `print` on the `response.json()` to see what Twitter actually says, and google the error! :)
 
