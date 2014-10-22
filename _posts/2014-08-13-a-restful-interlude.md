@@ -100,6 +100,8 @@ def phrase_contains(to_check, target):
         return False
 
 def get_phrase_mentions(mentions, phrase):
+""" Return a list of the users who match a phrase.
+"""
     matching_users = []
     for mention in mentions:
 	    text = mention['text']
