@@ -89,8 +89,8 @@ Turn this into a function called `make_tweet(status_message, auth)`.
   You do **not** need to create a new app - you can use the same app (and therefore the same `CLIENT_KEY` and `CLIENT_SECRET` as before). But you **do** need to generate a new authorization for the new user by generating a new `access.json` file:
 
     ```
-$ mv access.json access_oldaccount.json
-$ python twitter_oauth.py
+    $ mv access.json access_oldaccount.json
+    $ python twitter_oauth.py
     ```
     
 * Try `print` on the `response.json()` to see what Twitter actually says, and google the error! :)
