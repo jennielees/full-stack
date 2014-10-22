@@ -109,7 +109,7 @@ def get_phrase_mentions(mentions, phrase):
 	    # if so, add this user to matching_users
 	    # and maybe print something 
 	    # if not, do nothing
-	return 
+	return matching_users 
 	
 def get_weather_mentions(mentions):
     return get_phrase_mentions(mentions, "What's the weather?")
