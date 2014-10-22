@@ -68,7 +68,7 @@ We need to do three things:
 
 #### Tweetin', tweetin'
 
-To send a tweet, you need to `POST` to `statuses/update.json`. And have permission to post. You might want to create a new Twitter account for this kind of thing, otherwise your normal account could get a bit... messy.
+To send a tweet, you need to `POST` to `statuses/update.json`. And have permission to post. You might want to create a new Twitter account for this kind of thing, otherwise your normal account could get a bit... messy. But you don't need to create a new app.
 
 <pre class="hint">
 TWEET_URL = API_URL + "/1.1/statuses/update.json"
@@ -80,6 +80,19 @@ response = requests.post(TWEET_URL, data=data, auth=auth)
 Sweet! Now we can tweet!
 
 Turn this into a function called `make_tweet(status_message, auth)`.
+
+**If it doesn't work**: 
+
+* Check if your Twitter app has permission to actually post tweets. Go to [apps.twitter.com](http://apps.twitter.com) and go to the 'Permissions' tab for your app. Make sure [Read and Write](/public/twitter_perms.png) is set.
+* Check you authorized the app you are using, if you switched accounts:
+ 
+  You do **not** need to create a new app - you can use the same app (and therefore the same `CLIENT_KEY` and `CLIENT_SECRET` as before). But you **do** need to generate a new authorization for the new user by generating a new `access.json` file:
+
+    ```
+$ mv access.json access_oldaccount.json
+$ python twitter_oauth.py
+    ```
+* Try `print` on the `response.json()` to see what Twitter actually says, and google the error! :)
 
 #### Connecting it up
 
