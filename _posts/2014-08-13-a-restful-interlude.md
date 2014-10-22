@@ -92,6 +92,7 @@ Turn this into a function called `make_tweet(status_message, auth)`.
 $ mv access.json access_oldaccount.json
 $ python twitter_oauth.py
     ```
+    
 * Try `print` on the `response.json()` to see what Twitter actually says, and google the error! :)
 
 #### Connecting it up
