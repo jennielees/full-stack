@@ -195,7 +195,7 @@ Let's use our `get_city_and_state` function to try and get a sensible input:
 for user in matching_users:
     location = get_user_location(user)
     (city, state) = get_city_and_state(location)
-    sentence = get_weather_sentence(city, state)
+    sentence = get_weather_sentence(state, city) # our sentence function takes the arguments in the other order
 ```
 
 You might get a `KeyError: 'current_observation'` when you run this. That's ok. Python is looking for `current_observation` but the Weather API isn't giving it to you, probably because the location wasn't useful enough.
