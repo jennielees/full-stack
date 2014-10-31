@@ -15,6 +15,10 @@ In this homework, you have to take someone else's code and rewrite it.
 
 [Hackbright: Skills 2](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/skills2): More function practice, these are harder.
 
+### More Review
+
+* [Exercises](http://interactivepython.org/runestone/static/thinkcspy/SimplePythonData/Exercises.html)
+
 ### Older and Wiser
 
 Go back to a previous week's exercises. Go through them again, or attempt something from the extra credit section.
