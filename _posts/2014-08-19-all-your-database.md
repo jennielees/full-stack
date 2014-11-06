@@ -190,5 +190,3 @@ $ python sql_exercise.py
 ```
 
 When you've finished, flag someone to check over your answers.
-
-Then head to the [SQL Lesson](https://github.com/hackbrightacademy/sql_lesson) repository, read the instructions there, and work through that exercise too. 
