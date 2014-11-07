@@ -41,3 +41,9 @@ Then work through the lesson to learn:
 * How do you execute a SQL query using Python?
 * How can you get rows from the database?
 * What must you do when you are finished with the database connection?
+
+## Viewing Visually
+
+To look at the contents of a database in a more visual way, you can use a client like [Induction](http://inductionapp.com/). For Linux and Windows, [RazorSQL](http://www.razorsql.com/), [SQLite Browser](https://apps.ubuntu.com/cat/applications/sqlitebrowser/) (Ubuntu), and [DB Browser](http://sqlitebrowser.org/) are all (untested) options.
+
+For Induction, the easiest way to get going is to drag and drop the database file on top of the app icon. 
