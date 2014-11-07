@@ -8,7 +8,7 @@ week: 7
 
 We're going to work through this [SQL Lesson](https://github.com/hackbrightacademy/sql_lesson) to get an idea of how we might use a database in practice to power an app. The lesson uses a student database and goes over many of the SQL statements you already encountered.
 
-Head to [the lesson](https://github.com/hackbrightacademy/sql_lesson) and work through the steps outlined in the README file (which is shown when you visit the GitHub page). 
+Head to [the lesson](https://github.com/hackbrightacademy/sql_lesson) and work through the steps outlined in the README file (which is shown when you visit the GitHub page -- it starts with "SQL and Relational Databases"). 
 
 You will be thinking about data *modeling* - that is, how to represent some real world data (like students and projects) in a database.
 
@@ -28,7 +28,7 @@ Now we have a passing familiarity with SQL, we're going to introduce it into an 
 
 Work through [Part 2](https://github.com/hackbrightacademy/sql_lesson/blob/master/PART2-HB_APP.md) of the SQL Lesson.
 
-Start by cloning the GitHub repository so you can access the Python file it refers to:
+If you haven't already, clone the GitHub repository so you can access the Python file it refers to:
 
 ```
 $ git clone https://github.com/hackbrightacademy/sql_lesson.git
