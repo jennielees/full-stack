@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data, meet Cloud
+title: Data, meet App
 week: 8
 ---
 
