@@ -87,7 +87,7 @@ Your app should:
 
 You should also:
 
-* Fail gracefully if the street isn't in the database
+* Fail gracefully if the street isn't in the database (hello, `try`/`except`!)
 * Fail gracefully if the block isn't in the database
 * Make sure you have a function that returns the times
 
