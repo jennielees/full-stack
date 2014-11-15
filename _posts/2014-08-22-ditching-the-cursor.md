@@ -396,8 +396,51 @@ for item in ship.cargo:
 
 Write an interactive cargo manager using `raw_input` to get the ship name, cargo name and amount, and save it. 
 
+Note that to save a `Cargo` object you need to make sure the `ship` argument is a `Ship` not a string or integer:
+
+<pre class="hint">
+ship_name = raw_input("Ship name, lubber? ")
+user_ship = Ship.get(Ship.name==ship_name) # user_ship is now a Ship
+cargo = Cargo(amount=10, name="Pieces o' Eight", ship=user_ship)
+cargo.save()
+</pre>
+
 How would you handle the case where the name doesn't match a ship? What does `Ship.get` give you in this case, and can you deal with it gracefully?
+
+<pre class="hint">
+try:
+    my_ship = Ship.get(Ship.name=="bob")
+    # if peewee can't find that ship, it will throw an Exception
+    # of type ShipDoesNotExist (try it without the try/except!)
+except:
+    # must have gotten a ShipDoesNotExist error!
+    print "Sorry, that ship doesn't exist."
+</pre>
 
 Could you extend this to also check if the amount is a valid integer?
 
 What if the cargo is already assigned to that ship? Should you write a new row, or find the existing one and update it? To update in peewee, you just change an object and call `save()` again, like we did with the pirates being assigned to ships.
+
+<pre class="hint">
+cargo_name = "Pieces o' Eight"
+cargo_amount = 10
+cargo_ship = Ship.get(Ship.name=="Fair Louisa")
+try:
+    # Does this ship have any cargo by this name?
+    
+    existing_cargo = Cargo.get(Cargo.name==cargo_name, Cargo.ship==cargo_ship)
+    
+    # If this failed, throwing an Exception, the next 
+    # two lines don't run.
+    
+    # If it succeeded, add more to that cargo.
+    existing_cargo.amount += cargo_amount
+    existing_cargo.save()
+    
+except:
+
+    # It must not already exist, so create it
+    
+    cargo = Cargo(amount=cargo_amount, name=cargo_name, ship=cargo_ship)
+    cargo.save()
+</pre>
