@@ -4,6 +4,8 @@ title: Project Resources
 week: 9
 ---
 
+This page has two projects. The 'Pirate Bar' exercise is broken out in detail step-by-step. The 'Street Sweeping' exercise is left at a high level as an exercise for you.
+
 ## Sample Project 1: Pirate Bar
 
 We are going to write a bar manager for a pirate bar. The goal of this app is to **take input** and **use a database**.
