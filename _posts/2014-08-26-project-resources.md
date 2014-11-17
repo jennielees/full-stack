@@ -4,7 +4,7 @@ title: Project Resources
 week: 9
 ---
 
-This page has two projects. The 'Pirate Bar' exercise is broken out in detail step-by-step. The 'Street Sweeping' exercise is left at a high level as an exercise for you.
+This page has two sample projects. The 'Pirate Bar' project is broken out in detail step-by-step, though has some open-ended pieces at the end. The 'Street Sweeping' project is left at a high level as an exercise for you.
 
 ## Sample Project 1: Pirate Bar
 
