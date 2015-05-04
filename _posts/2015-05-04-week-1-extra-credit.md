@@ -6,3 +6,5 @@ permalink: week-1-hw/
 ---
 
 ### How to submit assignments
+
+We'll be submitting assignments via GitHub. This will be demonstrated in class -- check back here afterwards.

@@ -34,7 +34,7 @@ Both of these point to some resources you can work through first, though we've a
 
 #### Extra Credit
 
-* Write a script to calculate your remaining MUNI rides given your Clipper balance as input.
+* Write a script to calculate the number of MUNI rides you can take, given your Clipper balance as input.
 
 * Figure out (or remember) how to make and remove directories on the command line.
 
