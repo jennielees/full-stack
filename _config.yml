@@ -8,9 +8,9 @@ gems:
 permalink:        :title
 
 # Setup
-title:            Python Codelabs
-tagline:          Hackbright Back-End Web Development
-url:              labs.bewd.co
+title:            Full-Stack Development
+tagline:          Hackbright Part-Time Classes
+url:              https://jennielees.github.io/full-stack/
 paginate:         1
 baseurl:          
 author:

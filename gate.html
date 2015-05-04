@@ -1,0 +1,72 @@
+---
+layout: gate
+title: Index
+---
+
+<div class="letmein">
+
+    <p>You need the password to continue.</p>
+
+    <input id="letmeinpass" type="text">
+
+    <button type="submit" value="submit" id="letmeingo">&#9654;</button>
+
+    <div id="incorrect">
+      <small>
+      sorry, wrong password.. :-(
+      </small>
+    </div>
+
+</div>
+
+<div class="howtogetpassword">
+  <h3>Getting the password</h3>
+
+<pre><code data-trim class="python">$ mkdir hackbright
+$ curl -O http://labs.bewd.co/test.py
+$ python test.py
+</pre></code>
+
+
+
+  <p> Environment not set up yet? Check out the <a href="../installfest">Installfest</a> instructions.</p>
+</div>
+
+
+<script>
+
+  function checkPass() {
+    var value = $('#letmeinpass').val();
+    console.log("checking password");
+    console.log(sha256_digest(value));
+    var sha = sha256_digest(value);
+    if (sha == 'c39006dae3d2cc34b14c7b9ae77812f6ffa97892b0c53932aea9cdbebb014c75' || sha == '9e93b77959228983f8bed7aab7440f6277d2dd17c60b4ea0dec179ed09ec4133') {
+      console.log("correct password");
+      $.cookie("password", 1);
+      window.location.href='{{site.baseurl}}/map';
+    }
+    if (sha == 'b5beb35d79007f63bf1029e61b635d309eca02ac0c5459ee691c53a35e0089fa') {
+      console.log("admin password");
+      $.cookie("password", 1);
+      $.cookie("admin", 1);
+      window.location.href='{{site.baseurl}}/admin.html';
+      }
+
+    // otherwise, incorrect
+
+    $('#incorrect').fadeIn(500);
+  }
+
+  $('#letmeinpass').keypress(function(e) {
+    if (e.which == 13) {
+      checkPass();
+    } else {
+      $('#incorrect').hide();
+    }
+  });
+
+  $('#letmeingo').click(function() {
+    checkPass();
+  });
+
+</script>

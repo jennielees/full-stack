@@ -1,80 +1,119 @@
 ---
-layout: gate
-title: Index
+layout: map
+title: Map
 ---
 
-<script>
-  if (window.location.href != 'http://labs.bewd.co/') {
-    console.log(window.location.href);
-    window.location.replace('http://labs.bewd.co/');
-  }
-</script>
+  <ul>
+    <li><a href="installfest">Installfest!</a></li>
+    <li><a href="../pre-work">Pre-work</a></li>
+  </ul>
 
+    <div class="map">
 
-<div class="letmein">
+    <div class="week locked" data-week='1'>
+      <h4>Week 1</h4>
 
-    <p>You need the password to continue.</p>
-
-    <input id="letmeinpass" type="text">
-
-    <button type="submit" value="submit" id="letmeingo">&#9654;</button>
-
-    <div id="incorrect">
-      <small>
-      sorry, wrong password.. :-(
-      </small>
+      <ul>
+        <li><a href="../what-is-full-stack">What is Full Stack?</a></li>
+        <li><a href="../ready-set-code">Ready, Set, Code!</a></li>
+        <li><a href="../week-1-hw">Assignment</a></li>
+        <li><a href="../week-1-extra">Extra Credit &amp; Week 1 Resources</a></li>
+      </ul>
     </div>
 
-</div>
+    <div class="week locked" data-week='2'>
 
-<div class="howtogetpassword">
-  <h3>Getting the password</h3>
+      <h4>Week 2</h4>
 
-<pre><code data-trim class="python">$ mkdir hackbright
-$ curl -O http://labs.bewd.co/test.py
-$ python test.py
-</pre></code>
+      <ul>
+      </ul>
 
+    </div>
 
+    <div class="week locked" data-week='3'>
 
-  <p> Environment not set up yet? Check out the <a href="../installfest">Installfest</a> instructions.</p>
-</div>
+      <h4>Week 3</h4>
 
+      <ul>
+      </ul>
 
-<script>
+    </div>
 
-  function checkPass() {
-    var value = $('#letmeinpass').val();
-    console.log("checking password");
-    console.log(sha256_digest(value));
-    var sha = sha256_digest(value);
-    if (sha == 'c39006dae3d2cc34b14c7b9ae77812f6ffa97892b0c53932aea9cdbebb014c75' || sha == '9e93b77959228983f8bed7aab7440f6277d2dd17c60b4ea0dec179ed09ec4133') {
-      console.log("correct password");
-      $.cookie("password", 1);
-      window.location.href='{{site.baseurl}}/map';
-    }
-    if (sha == 'b5beb35d79007f63bf1029e61b635d309eca02ac0c5459ee691c53a35e0089fa') {
-      console.log("admin password");
-      $.cookie("password", 1);
-      $.cookie("admin", 1);
-      window.location.href='{{site.baseurl}}/admin.html';
+    <div class="week locked" data-week='4'>
+
+      <h4>Week 4</h4>
+
+      <ul>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='5'>
+
+      <h4>Week 5</h4>
+
+      <ul>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='6'>
+
+      <h4>Week 6</h4>
+
+      <ul>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='7'>
+
+      <h4>Week 7</h4>
+
+      <ul>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='8'>
+
+      <h4>Week 8</h4>
+
+      <ul>
+      </ul>
+    </div>
+
+    <div class="week locked" data-week='9'>
+
+      <h4>Weeks 9 &amp; 10</h4>
+
+      <ul>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <script>
+  // Set active state based on whether weeks are locked.
+
+  function updateStatusUI(status) {
+    $.each(status.weeks, function(index, week) {
+      console.log(week);
+      if (week) {
+        console.log("Week " + week.week + " : " + week.locked);
+        if (!week.locked) {
+          $('[data-week=' + week.week + ']').removeClass('locked');
+        } else {
+          $('[data-week=' + week.week + ']').addClass('locked');
+        }
       }
+    });
+  };
 
-    // otherwise, incorrect
+  fb.on('value', function (snapshot) {
+    weekstatus = snapshot.val();
+    console.log(snapshot.val());
+    updateStatusUI(snapshot.val());
+  }, function (errorObject) {
+      console.log('The read failed: ' + errorObject.code);
+    });
 
-    $('#incorrect').fadeIn(500);
-  }
 
-  $('#letmeinpass').keypress(function(e) {
-    if (e.which == 13) {
-      checkPass();
-    } else {
-      $('#incorrect').hide();
-    }
-  });
-
-  $('#letmeingo').click(function() {
-    checkPass();
-  });
-
-</script>
+  </script>

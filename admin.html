@@ -3,13 +3,6 @@ layout: default
 title: Admin
 ---
 
-<script>
-  if ($.cookie("admin") != 1) {
-    window.location.href = '{{site.baseurl}}/';
-    $.cookie("password",0); //allow re-login
-  }
-</script>
-
 <div class="admin">
 
     <p>Set which week we are on.</p>
