@@ -25,6 +25,8 @@ The layers of the stack we will be looking at are:
 * Web Server
 * Host Machine
 
+Food for thought:
+
 * How do these layers of the stack relate to the Pinterest app demonstrated in class?
 * Pick an app from this list, or another app that you're familiar with. Can you identify where it might use each component in the stack?
   * Twitter
