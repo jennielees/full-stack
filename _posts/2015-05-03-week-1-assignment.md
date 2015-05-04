@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Week 1 Extra Credit
+title: Week 1 Extra Resources
 week: 1
 permalink: week-1-extra/
 ---
+
+The "Extra Resources" section for each week is a set of useful links and references that accompany the material for each week. You'll also find some "more practice" and "challenge" material in here. These are **optional**, but recommended if you want to get more facetime with the material. If you want feedback on your solutions to any of these problems, submit by email.
 
 #### Resources
 
@@ -22,17 +24,15 @@ permalink: week-1-extra/
 * [Control Flow: If and For](http://www.swaroopch.com/notes/python/#control_flow)
 * [Codecademy: Loops](http://www.codecademy.com/courses/python-beginner-en-cxMGf/0/1?curriculum_id=4f89dab3d788890003000096)
 
-#### Exercises
-
-Want more practice? Try the 'extra credit' section below, or work through
+#### More Practice
 
 * [Hackbright: Conditionals: Make a guessing game](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise01)
 * [Hackbright: Math and Functions](https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/Exercise02)
 
-Both of these point to some resources you can work through first, though we've already covered some of that material, so try reading through the exercise first and going to the extra resources if you need them.
+Both of these point to some resources you can work through first, so try reading through the exercise first and going to the extra resources if you need them.
 
 
-#### Extra Credit
+#### Challenges
 
 * Write a script to calculate the number of MUNI rides you can take, given your Clipper balance as input.
 
