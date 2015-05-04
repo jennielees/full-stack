@@ -10,7 +10,7 @@ We'll be coding up our own web server next week, so let's make sure our skills a
 
 #### Exercise: Superhero Names (Lists and Files)
 
-First, download the [hero and villain names](/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory.
+First, download the [hero and villain names](/full-stack/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory.
 
 ##### Part 1
 
