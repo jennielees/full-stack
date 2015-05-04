@@ -12,7 +12,7 @@ title:            Full-Stack Development
 tagline:          Hackbright Part-Time Classes
 url:              https://jennielees.github.io/full-stack/
 paginate:         1
-baseurl:          
+baseurl:          /full-stack
 author:
   name:           Jennie Lees
   url:            https://twitter.com/jennielees
