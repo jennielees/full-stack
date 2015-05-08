@@ -8,21 +8,50 @@ week: 1
 
 We'll be coding up our own web server next week, so let's make sure our skills are sharp!
 
+### Choose your own Adventure
+
+In building our web server and web apps, we'll need the following programming concepts. We will be building on them as we go along, so don't feel you have to know //everything// right now.
+
+* Variables
+* Lists and Dictionaries
+* For and while loops
+* If, else, and testing if things are true
+* Functions and return values
+* Reading from a file
+* How to run a program from the command line
+
+**New to Programming**:
+
+Check out the links in the [extra resources]('/full-stack/week-1-extra') section. Spend a little time on Codecademy getting familiar with the syntax, and then move on to [Learn Python the Hard Way](http://learnpythonthehardway.org/book/).
+
+If you want a more guided tour, [this older course material](http://labs.bewd.co/) might be helpful.
+
+**Experienced Programmer but new to Python**:
+
+Try jumping straight into the exercises below. Look up things as you need to - the links in the [extra resources]('/full-stack/week-1-extra') section should help point you in the right direction.
+
+**Experienced with Python**: 
+
+Run through the exercises below, and the assignment.
+
+If you get done with that, there are a couple more things for you to do as programming practice in the extra resources section. If you want to move on and get a headstart, see if you can figure out this [web challenge](https://gist.github.com/jennielees/26d9449099ad215c5f4e).
+
+
 #### Exercise: Superhero Names (Lists and Files)
 
 First, download the [hero and villain names](/full-stack/public/data/names.txt) file. This should be a file ending in '.txt'. Move it to your Python working directory.
 
 ##### Part 1
 
-Write a Python script which loads the names from the file, and converts your own name to a superhero (or supervillain) name by picking the name corresponding to your first name's position in the alphabet. For example, if your name starts with A, you want superhero name #1. Mine (J) is name #10.
+Write a Python script which loads the names from the file, and converts your own name to a superhero (or supervillain) name by picking the name corresponding to your first name's position in the alphabet (there are 26 superheroes in the list). For example, if your name starts with A, you want superhero name #1. Mine (J) is name #10.
 
 Here's a snippet of code to help with the letter part of this:
 
 ```
 import string
 uppers = string.uppercase
-print uppers
-j_position = uppers.find('J')
+print uppers  # this will help you figure out what this is
+j_position = uppers.find('J')  # what do you think .find does?
 ```
 
 (By the way, I want to point out that [Princess Python](http://en.wikipedia.org/wiki/Princess_Python) is a real character.)

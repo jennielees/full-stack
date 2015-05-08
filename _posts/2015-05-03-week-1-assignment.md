@@ -7,7 +7,15 @@ permalink: week-1-hw/
 
 ### How to submit assignments
 
-We'll be submitting assignments via GitHub. This will be demonstrated in class -- check back here afterwards.
+We'll be submitting assignments via GitHub. 
+
+In order to submit, **fork** the assignment repository to your own GitHub account. Make the changes you need, and **push** them back to your account.
+
+Then create a **pull request** by visiting the page for your own GitHub repository, e.g. `https://github.com/YOURGITHUBNAME/REPOSITORYNAME`. You should see a prompt to make a pull request there. If not, you can hit the tiny "Pull Request" text on the page.
+
+* [GitHub Help: Forking](https://help.github.com/articles/fork-a-repo/)
+* [GitHub Help: Pull Requests](https://help.github.com/articles/using-pull-requests/)
+* [Step by Step Pull Request Tutorial](https://www.thinkful.com/learn/github-pull-request-tutorial/)
 
 #### Assignment
 
