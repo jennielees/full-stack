@@ -65,7 +65,7 @@ GET / HTTP/1.1
 
 This contains the path being requested (`/`).
 
-What happens if you try to visit [http://localhost:5050/kittens](http://localhost:5050/kittens)?
+What happens if you try to visit [http://localhost:5000/kittens](http://localhost:5050/kittens)? (Change 5000 if you changed port number.)
 
 Can you use this knowledge to use `if` statements and return a different HTML file if a different path is being requested? You'll probably want to make a couple of different test files for this, and you might find the `split()` and `startswith()` functions helpful.
 
