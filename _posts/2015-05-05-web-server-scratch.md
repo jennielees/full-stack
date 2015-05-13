@@ -4,7 +4,7 @@ title: Web Server from Scratch
 week: 2
 ---
 
-### What does a web server do?
+## What does a web server do?
 
 The goal of this lab is to work through some of the basic functionality of a web server, so we can better understand web frameworks.
 
@@ -12,7 +12,7 @@ The goal of this lab is to work through some of the basic functionality of a web
 * [HTTP Status Codes](http://httpstatus.es/)
 * [What happens when you type an address into the address bar and hit enter?](https://github.com/alex/what-happens-when)
 
-### Building our own
+## Building our own
 
 We're going to look at three things.
 
@@ -21,7 +21,7 @@ We're going to look at three things.
 * Returning appropriate error codes
 
 
-#### Handling responses
+## Handling responses
 
 In order to allow browsers to connect to our server, we'll open a **socket**. Once the socket is open we can listen for data, and send it back. When we are done sending, we'll close the socket.
 
@@ -53,7 +53,7 @@ Save this code as a file (maybe `server.py`) and run it. Connect to http://local
 
 Can you get the `client_sock` to send the contents of a file, instead of the string HTML?
 
-#### Mapping paths to responses
+## Mapping paths to responses
 
 Look at the printout from your `client_sock`. The first part shows the headers from the incoming request.
 
@@ -71,7 +71,7 @@ Can you use this knowledge to use `if` statements and return a different HTML fi
 
 Is there a way to do it without having a lot of `if`s? Maybe some other way you could store the paths and filenames...
 
-#### Handling errors
+## Handling errors
 
 To return an error code, we need to make sure we start our response with a status line:
 
@@ -85,7 +85,7 @@ Try changing a `200 OK` somewhere to `404 Not Found`. Visit the page in your bro
 
 Can you combine this with the previous section to return a 404 for paths that haven't been explicitly defined?
 
-#### Optional Challenges
+## Optional Challenges
 
 Pick another [error code](http://httpstatus.es/) and implement it. 301, 418 and 500 are all good starting points.
 
@@ -93,8 +93,8 @@ So far, you've only implemented GET to get a single page. Can you deal with quer
 
 Building on this, see if you can figure out a way to combine the HTML page itself with the query string variable. You might want to define a specific page and syntax to make this concrete:
 
-kittens.html
 ```
+kittens.html:
 <img src='http://placekitten.com/g/SIZE/SIZE'/>
 ```
 
@@ -106,6 +106,6 @@ html_string = html_string.replace('SIZE', querystring_size)
 
 Finally, last super optional challenge: can you implement POST as well as GET?
 
-### Extra Reading
+## Extra Reading
 
 * [Let's Build a Web Server](http://ruslanspivak.com/lsbaws-part1/)
