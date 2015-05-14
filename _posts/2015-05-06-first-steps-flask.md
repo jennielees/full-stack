@@ -198,26 +198,29 @@ Now create a HTML page called `counter.html` that has the following content:
 
 ```
 <ul>
+{% raw %}
 {% for number in numbers %}
   <li>{{ number }}</li>
 {% endfor %}
+{% endraw %}
 </ul>
 ```
 
-The `for` loop inside Jinja uses the `{% .. %}` syntax and must be closed with an `endfor` statement. This does pretty much what you'd expect - it loops through a variable called `numbers`, assiging each item to the local variable `number`. I can then print `number` out within a `<li>` element.
+The `for` loop inside Jinja uses the `{% raw %}{% .. %}{% endraw %}` syntax and must be closed with an `endfor` statement. This does pretty much what you'd expect - it loops through a variable called `numbers`, assiging each item to the local variable `number`. I can then print `number` out within a `<li>` element.
 
 To get `numbers` into the template, it's the same idea as with the name above. Although, we need to actually define it first, as we're not relying on the route this time.
 
 ```
 @app.route('/count')
 def count():
-    numbers = range(3)   # the range(n) function generates a list, [1, 2, .. n]
+    numbers = range(3)   # the range(n) function generates a list:
+                         # [1, 2, .. n]
     return render_template('counter.html', numbers=numbers)
 ```
 
 Can you make it say "ah ah ah!" after each number?
 
-Can you use the `{% if %}` statement in the template to only say "ah ah ah!" sometimes? ([Jinja reference](http://jinja.pocoo.org/docs/dev/templates/))
+Can you use the `{% raw %}{% if %}{% endraw %}` statement in the template to only say "ah ah ah!" sometimes? ([Jinja reference](http://jinja.pocoo.org/docs/dev/templates/))
 
 If you want to visualise what's going on here, use the `print` command to print out whatever you like inside the view function. This will appear in your terminal output. Sadly you can't `print` in the template, but using the `{{ foo }}` syntax will insert the contents of the variable `foo`.
 
@@ -266,12 +269,14 @@ Your data structure might look something like this:
 The goal here is not to spend forever typing out the pin content -- just do a few. You should be able to access the contents inside the for loop like this:
 
 ```
+{% raw %}
 {% for pin in pins %}
    .. {{ pin.image }} ..
    .. {{ pin.avatar }} ..
    .. {{ pin.name }} ..
    etc.
 {% endfor %}
+{% endraw %}
 ```
 
 ### Challenges (Optional)
