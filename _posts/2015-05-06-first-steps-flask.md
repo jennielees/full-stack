@@ -148,7 +148,7 @@ We then need a place to receive this, which is on the next line, when we define 
 def hello(name):
 ```
 
-The arguments inside the parentheses for your view functions have to match the "patterns" defined inside angle brackets in your route.
+The arguments inside the parentheses for your view functions have to match the "patterns" defined inside angle brackets in your route. ([Need a refresher on functions?](http://learnpythonthehardway.org/book/ex18.html))
 
 Together this looks like:
 
