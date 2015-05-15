@@ -222,7 +222,7 @@ Can you make it say "ah ah ah!" after each number?
 
 Can you use the `{% raw %}{% if %}{% endraw %}` statement in the template to only say "ah ah ah!" sometimes? ([Jinja reference](http://jinja.pocoo.org/docs/dev/templates/))
 
-If you want to visualise what's going on here, use the `print` command to print out whatever you like inside the view function. This will appear in your terminal output. Sadly you can't `print` in the template, but using the `{{ foo }}` syntax will insert the contents of the variable `foo`.
+If you want to visualise what's going on here, use the `print` command to print out whatever you like inside the view function. This will appear in your terminal output. Sadly you can't `print` in the template, but using the `{%raw%}{{ foo }}{%endraw%}` syntax will insert the contents of the variable `foo`.
 
 ### Enter Pinterest
 
