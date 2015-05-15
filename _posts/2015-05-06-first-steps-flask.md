@@ -169,10 +169,10 @@ render_template('hello_name.html', name=name)
 And finally, we tell the template to insert the name in the HTML:
 
 ```
-<h1>Hello, {{name}}</h1>
+<h1>Hello, {%raw%}{{name}}{%endraw%}</h1>
 ```
 
-The `{{ name }}` syntax is [Jinja](http://jinja.pocoo.org/docs/dev/templates/), but also affectionately called "handlebars style" or "mustaches" (not to be confused with a couple of Javascript libraries which are actually called Handlebars and Mustache!).
+The `{%raw%}{{ name }}{%endraw%}` syntax is [Jinja](http://jinja.pocoo.org/docs/dev/templates/), but also affectionately called "handlebars style" or "mustaches" (not to be confused with a couple of Javascript libraries which are actually called Handlebars and Mustache!).
 
 Try putting this all together.
 
