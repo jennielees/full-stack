@@ -299,7 +299,7 @@ Make the page fluid (you might need to copy-paste a few more pins to do this). E
 Using the `loop.index` variable in the template, you can use an `if` statement with the modulo operator:
 
 ```
-{% if loop.index % 10 == 0 %}
+{%raw%}{% if loop.index % 10 == 0 %}{%endraw%}
 ```
 
 This will evaluate to True for every 10th item, as an example. Given this, can you add in the new `<div>` columns?
