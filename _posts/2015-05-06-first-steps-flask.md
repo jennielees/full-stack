@@ -291,3 +291,15 @@ def my_search():
     print request.form
     ...
 ```
+
+Set a favicon for the page.
+
+Make the page fluid (you might need to copy-paste a few more pins to do this). Every N-th item, you'll see a new `<div class="col-5">` statement in the HTML (and the previous `<div>` will be closed). 
+
+Using the `loop.index` variable in the template, you can use an `if` statement with the modulo operator:
+
+```
+{% if loop.index % 10 == 0 %}
+```
+
+This will evaluate to True for every 10th item, as an example. Given this, can you add in the new `<div>` columns?
