@@ -114,7 +114,7 @@ We're going to make sure this code can pass a few **tests** before we release it
 
 Run `test_models.py`. Pretty dismal, huh? Why do some of them pass already? Should they?
 
-See if you can make all the tests pass. Feel free to improve them if you need to. Are some of the tests linked? Is it easier or harder to make them pass if they are intertwined?
+See if you can make all the tests pass (by editing the code they are testing, inside `models.py`). Feel free to improve them if you need to. Are some of the tests linked? Is it easier or harder to make them pass if they are intertwined?
 
 Can you add a test called `test_get_nonexistent_user` that calls the function `get_user_by_username` with a username that doesn't exist? What do you think should happen in this case?
 
