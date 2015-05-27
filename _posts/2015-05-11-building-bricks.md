@@ -120,9 +120,23 @@ Can you add a test called `test_get_nonexistent_user` that calls the function `g
 
 ### Not working?
 
-With inserts and updates, don't forget to call `conn.commit()` to make sure any changes you made actually hit the database.
+With inserts, deletes and updates, don't forget to call `conn.commit()` to make sure any changes you made actually hit the database. (Yep, this might be missing in the test file too!)
 
 Also remember to call `conn.close()` to clean up the connection after yourself, so you don't end up accidentally locking the database.
+
+"No such column" error? SQL thinks strings which aren't in quotes are SQL entities - columns and such. Python doesn't pass through the quotes around a string during `format`:
+
+```
+>>> mystring = 'bob'
+>>> print '{}'.format(mystring)
+bob
+```
+
+So you need to make sure you add them yourself, e.g.
+
+```
+...VALUES ('{}', '{}' ...)
+```
 
 ## From Models to Views
 
