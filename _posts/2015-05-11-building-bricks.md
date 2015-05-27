@@ -47,6 +47,7 @@ We'll start with models.
 We want to handle users, so we'll set up a few attributes for our users.
 
 A user has the following:
+
 * ID
 * username
 * email address
