@@ -55,7 +55,7 @@ A user has the following:
 * real name
 * avatar image URL
 
-Create a SQL `'CREATE TABLE'` statement for the `users` table, and then create the database, as you did with the ingredients last time. [Refresher](http://www.tutorialspoint.com/sqlite/sqlite_create_table.htm) [Solution](https://gist.github.com/jennielees/40de2da674c4bc9cfbe8)
+Create a SQL `'CREATE TABLE'` statement for the `users` table, and then create the database, as you did with the ingredients last time. ([Refresher](http://www.tutorialspoint.com/sqlite/sqlite_create_table.htm)) ([Solution](https://gist.github.com/jennielees/40de2da674c4bc9cfbe8))
 
 OK, you should now have an empty `users` table in a database. I'll assume the database is called `users.db` from here.
 
