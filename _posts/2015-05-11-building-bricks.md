@@ -110,7 +110,7 @@ def update_user(id, attribute, new_value):
 
 We're going to make sure this code can pass a few **tests** before we release it into the wild.
 
-[Here](https://gist.github.com/jennielees/f6bb1fcbf002b0559fb9) is the test file - save this code as `test_models.py` ([raw](https://gist.githubusercontent.com/jennielees/f6bb1fcbf002b0559fb9/raw/e68e22be3acec31057a335074ddd54ebe93490bc/test_models.py)).
+[Here](https://gist.github.com/jennielees/f6bb1fcbf002b0559fb9) is the test file - save this code as `test_models.py` ([raw](https://gist.githubusercontent.com/jennielees/f6bb1fcbf002b0559fb9/raw/f83f1e3ba3ff5dd90440d4b8240340478b65e4f7/test_models.py)).
 
 Run `test_models.py`. Pretty dismal, huh? Why do some of them pass already? Should they?
 
