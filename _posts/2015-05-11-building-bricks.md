@@ -117,3 +117,80 @@ See if you can make all the tests pass. Feel free to improve them if you need to
 
 Can you add a test called `test_get_nonexistent_user` that calls the function `get_user_by_username` with a username that doesn't exist? What do you think should happen in this case?
 
+### Not working?
+
+With inserts and updates, don't forget to call `conn.commit()` to make sure any changes you made actually hit the database.
+
+Also remember to call `conn.close()` to clean up the connection after yourself, so you don't end up accidentally locking the database.
+
+## From Models to Views
+
+Now create the views. Make these **totally independent** of the models file you just created and got working.
+
+You are going to want the following HTML pages:
+
+* Log in page (submit a form containing username and password)
+* Sign up page (enter email, username, password, etc, to create account)
+* Admin page (list all users)
+* Some kind of index page to prompt the user to sign up or log in
+* Some kind of "Congrats, you are logged in" page
+
+Hook these up to basic Flask routes in a new app -- without any database work. Make sure they all fit together and that a user can submit the sign up or log in forms successfully. [Skeleton Reference](https://gist.github.com/jennielees/26e1f5703b2ba29471bd)
+
+## And now... the controllers...
+
+There isn't a great deal of controller logic needed for these routes, but there is some. You might have spotted it as you were hooking things up in the last section.
+
+Expand the login, signup and list pages to use the database model methods we created before. Nice and clean!
+
+[Here](https://gist.github.com/jennielees/1a5b65edf983fa299393) is a template with some guiding comments.
+
+### Fun stuff
+
+There are some notes in the template above relating to the signup form. How can you check the signup information is valid? What should you do if the username is already taken?
+
+**Logging in a user** is a great use of the [Flask session](http://flask.pocoo.org/docs/0.10/quickstart/#sessions). The session keeps some state on the server, and uses [cookies](http://en.wikipedia.org/wiki/HTTP_cookie) - tiny text files stored in your web browser and sent back to the server - to match that state to the user making the request.
+
+To "log in" a user, first make sure you have imported the session - you'll also need to set up an app secret key.
+
+```
+from flask import Flask, render_template, session
+
+app = Flask(__name__)
+app.secret_key = 'thisisasecret'
+```
+
+Now, inside your login method:
+
+```
+session["username"] = username  # for example, this sets a username for the user
+```
+
+You can then check if the user is logged in from **any** function:
+
+```
+if session.get('username'):
+   # this will be executed if 'username' is present in the session
+```
+
+And you can delete the `username` key to log the user out
+
+```
+del session['username']
+```
+
+Using sessions, log the user in properly. Add a `/logout` method.
+
+### Extra Credit
+
+Have time left or want to dig deeper? Great!
+
+Create a user settings page where the user can change their password.
+
+Can you make this "safe"? (i.e. the user has to enter their old password and retype the new one twice)
+
+Can you think of a better way to store passwords than in plain-text? [This tutorial](http://www.pythoncentral.io/hashing-strings-with-python/) might be interesting.
+
+Create a `delete_account` method inside `models.py` and then hook that up to the admin page (and the user settings page, if you created it). Does this seem a little dangerous to you? Can you think of a better way to allow the user to 'delete' their account without potentially totally destroying it?
+
+Can you figure out how to do a "forgot password" flow? Create the web pages and HTML routes first, then create a function that would generate a new password, and a second function to email the user the new password. Actually sending the email is something we will cover in a couple of weeks, but if you are really keen, [see this guide](https://bradgignac.com/2014/05/12/sending-email-with-python-and-the-mailgun-api.html).
