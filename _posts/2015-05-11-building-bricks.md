@@ -138,6 +138,8 @@ So you need to make sure you add them yourself, e.g.
 ...VALUES ('{}', '{}' ...)
 ```
 
+If you added AUTOINCREMENT in your CREATE TABLE statement, you do **not** need to supply an ID while inserting something. This also means that if you DELETE everything in the database, as our test file does, our IDs might change between test runs! Is there a way we can find out what the ID of our test row is?
+
 ## From Models to Views
 
 Now create the views. Make these **totally independent** of the models file you just created and got working.
