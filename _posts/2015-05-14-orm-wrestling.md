@@ -16,7 +16,7 @@ Let's start by installing them:
 pip install sqlalchemy flask-sqlalchemy
 ```
 
-### An interactive example
+## An interactive example
 
 Clone [this sample app](https://github.com/jennielees/flask-sqlalchemy-example) locally.
 
@@ -38,7 +38,7 @@ python app.py
 
 Check it out. What does it do? Add an item or two.
 
-#### Inside the Models
+### Inside the Models
 
 Open `models.py` and take a look at the model definitions.
 
@@ -102,7 +102,7 @@ When we run `from models import *`, that imports everything defined within `mode
 
 `import` statements do not trigger `if __name__ == '__main__'` lines. That 'if' statement only runs if the file is run directly. This allows us to do useful things like put our "create database tables" code in a sensible place, while also ensuring that it doesn't get run every time we want to use our models. You can experiment with this by moving the `db.create_all()` statement outside the `if`. What happens now when you `import`?
 
-### SQLAlchemy Commands
+## SQLAlchemy Commands
 
 Here are the main commands you'll be using to interact with database items now. I'm using `Dessert` as an example, but all of these apply to **any** class that inherits from `db.Model`, so in the example provided, they would also work just as well on `Menu`.
 
@@ -145,7 +145,7 @@ In this snippet, I called `commit` once I'd gone through every dessert. The `com
 
 You should be able to figure out the SQL equivalents for all of these commands. Luckily, you don't have to write it any more (and I'm not going to test you on it!), but it's really useful to know what's happening under the hood.
 
-### Building our app out
+## Building our app out
 
 You probably noticed our app was... missing some useful functionality. Let's add it!
 
@@ -190,7 +190,7 @@ Then `git checkout bootstrap` should work. To get your changes back, you can run
 
 In this case, the code above the `====` is the stuff from the `bootstrap` changes, and the stuff below the `====` is my stashed change. I can choose which bits to delete or update, but I need to get rid of all the `===`, `<<<<` and `>>>>` lines at least, or my app will run into problems.
 
-### Bootstrap Integration
+## Bootstrap Integration
 
 The bootstrap integration is pretty straightforward. I'm using bootstrap as an easy way to make the app look a bit nicer, but you can spend some time improving it if you like (I recommend you follow the rest of this lab through before doing so, to minimize git merge errors).
 
@@ -198,7 +198,7 @@ The bootstrap integration is pretty straightforward. I'm using bootstrap as an e
 
 In order to integrate Bootstrap, I added a `header.html` template with the Bootstrap links, and then used {%raw%}`{% include 'header.html' %}`{%endraw%} at the top of my other templates.
 
-### Validation
+## Validation
 
 You probably noticed that there are some serious flaws in our "create a dessert" process. For one, the user could leave boxes empty and we don't do anything about it!
 
@@ -237,7 +237,7 @@ If a function like `create_dessert` raises an `Exception`, it means that it didn
 
 We need to initialize the `dessert` variable beforehand, though, otherwise the final line in the code above won't know what `dessert` is. Try commenting out the first line in your tests and see what happens. Does it have to be `None` or could the "original" value of `dessert` be anything?
 
-### Deleting Items
+## Deleting Items
 
 To round out our app, let's introduce item deletion. In order to do this we'll create an 'item details' page which we can delete from.
 
@@ -257,13 +257,13 @@ That's all there is in the git repository, so now we can make some changes witho
 
 Pick and choose from the following challenges! We will continue working on these on Thursday.
 
-### Better Validation
+## Better Validation
 
 The validation we introduced isn't particularly clever. For one thing, it doesn't check if an item already exists with the same name. Secondly, it doesn't check if the price and calories values are sensible ones (for example, I could create a chocolate dessert with 10000000 calories).
 
 Extend the validation to be a bit more realistic.
 
-### Are You Sure?
+## Are You Sure?
 
 Deleting is pretty scary! Ask the user if they are sure they want to delete.
 
@@ -276,7 +276,7 @@ This could happen a couple of different ways:
 
 Or think up your own!
 
-### Updating an Item
+## Updating an Item
 
 Add the functionality to edit / update an item. You will probably want to reuse the `add.html` template. In order to make it easy to update an item, you can pre-populate the template with the existing item's values like this:
 
@@ -286,7 +286,7 @@ Add the functionality to edit / update an item. You will probably want to reuse 
 ```
 {% endraw %}
 
-### Search
+## Search
 
 Add a search box to the index!
 
@@ -294,7 +294,7 @@ This search box should submit to a new Flask view that gets all the desserts mat
 
 To extend this, you could also add an Advanced Search that gets all the desserts above or below a certain calorie or price threshold. Unfortunately `filter_by` only works for `=` type queries; if you want to filter for items above or below a value, you need to use the more clunky `Dessert.query.filter(Dessert.price >= 5)` syntax.
 
-### Locally Grown
+## Locally Grown
 
 Add a new field to the `Dessert` model for the `origin` of the dessert. Changing existing SQL tables is funky. The easiest way is to delete the database and recreate it, but you will **lose all your data** this way:
 
@@ -315,7 +315,7 @@ This could go wrong though, especially if you make a mistake in the query (SQLit
 
 Secondly, you can copy the data out, and then load it back in. You'll have to write a [little Python script](https://gist.github.com/jennielees/472e926f4d924c4d1634) to do that.
 
-### Spruce it Up
+## Spruce it Up
 
 Add a new field to `Dessert`, `image_url`, that you can use to save the URL to a picture of the dessert. Then use that in your HTML template to make your dessert list look a lot more tasty.
 
@@ -323,6 +323,6 @@ Also, dive into the Bootstrap world and see if you can make the whole thing look
 
 If things like the decimal point formatting of prices has been annoying you, look at some of the Jinja options, [like this one](http://stackoverflow.com/questions/12681036/is-there-a-direct-approach-to-format-numbers-in-jinja2).
 
-### Ordering
+## Ordering
 
 Add UI options to the dessert list to order by name, price or calories, using the server-side `Dessert.query.order_by('name')` syntax. You will need to add a parameter to your list route.
