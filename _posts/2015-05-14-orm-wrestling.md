@@ -18,6 +18,8 @@ pip install sqlalchemy flask-sqlalchemy
 
 ## An interactive example
 
+**Work in pairs** for this exercise. Explaining what the code does to someone else will help you understand it a lot more easily than running through it in your head! Use the pairing workstations or your own laptops.
+
 Clone [this sample app](https://github.com/jennielees/flask-sqlalchemy-example) locally.
 
 ```
