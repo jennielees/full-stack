@@ -147,6 +147,8 @@ In this snippet, I called `commit` once I'd gone through every dessert. The `com
 
 You should be able to figure out the SQL equivalents for all of these commands. Luckily, you don't have to write it any more (and I'm not going to test you on it!), but it's really useful to know what's happening under the hood.
 
+Reference: [Last week's Users exercise](https://gist.github.com/jennielees/1801044b5c2975a358d1) rewritten with SQLAlchemy instead of raw SQL.
+
 ## Building our app out
 
 You probably noticed our app was... missing some useful functionality. Let's add it!
