@@ -104,6 +104,8 @@ When we run `from models import *`, that imports everything defined within `mode
 
 `import` statements do not trigger `if __name__ == '__main__'` lines. That 'if' statement only runs if the file is run directly. This allows us to do useful things like put our "create database tables" code in a sensible place, while also ensuring that it doesn't get run every time we want to use our models. You can experiment with this by moving the `db.create_all()` statement outside the `if`. What happens now when you `import`?
 
+(Nothing bad, but the app will be trying to create the database tables whenever you import, which is a little unnecessary. For databases other than SQLite, this tends to throw a nasty "Oi mate, the tables already exist" error.)
+
 ## SQLAlchemy Commands
 
 Here are the main commands you'll be using to interact with database items now. I'm using `Dessert` as an example, but all of these apply to **any** class that inherits from `db.Model`, so in the example provided, they would also work just as well on `Menu`.
