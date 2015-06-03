@@ -178,6 +178,7 @@ git stash
 
 Then `git checkout bootstrap` should work. To get your changes back, you can run `git stash pop` to pop them off the stash. However, you will probably see a **merge conflict** warning, which means that whichever files were modified have a great big ugly merge message inside them:
 
+{% raw %}
 ```
 <<<<<<< Updated upstream
 {% include 'header.html' %}
@@ -185,6 +186,7 @@ Then `git checkout bootstrap` should work. To get your changes back, you can run
 <h3>Jen's Awesome Dessert Menu</h3>
 >>>>>>> Stashed changes
 ```
+{% endraw %}
 
 In this case, the code above the `====` is the stuff from the `bootstrap` changes, and the stuff below the `====` is my stashed change. I can choose which bits to delete or update, but I need to get rid of all the `===`, `<<<<` and `>>>>` lines at least, or my app will run into problems.
 
