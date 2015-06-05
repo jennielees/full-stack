@@ -259,7 +259,7 @@ We added a couple new views, a new template, and a `delete_dessert` method with 
 
 That's all there is in the git repository, so now we can make some changes without worrying about future merge conflicts :)
 
-## Extending the App
+# Extending the App
 
 Pick and choose from the following challenges! We will continue working on these on Thursday.
 
@@ -268,6 +268,33 @@ Pick and choose from the following challenges! We will continue working on these
 The validation we introduced isn't particularly clever. For one thing, it doesn't check if an item already exists with the same name. Secondly, it doesn't check if the price and calories values are sensible ones (for example, I could create a chocolate dessert with 10000000 calories).
 
 Extend the validation to be a bit more realistic.
+
+Tip:
+
+When you do `Dessert.query.filter_by(field=value)`, it returns what is effectively a "lazy query". To make this into something you can actually use, try the following:
+
+* `Dessert.query.filter_by(field=value).all()` - converts to a list
+* `Dessert.query.filter_by(field=value).first()` - gets first item or `None`
+* `Dessert.query.filter_by(field=value).one()` - gets one item if there is one, otherwise throws an exception
+
+So, from this, we can see that
+
+```
+Dessert.query.get(1) == Dessert.query.filter_by(id=1).one()
+```
+
+Neat!
+
+Also, the query is automatically evaluated when used in a `for` loop, so these are essentially identical:
+
+```
+for dessert in Dessert.query.filter_by(name='cake').all():
+    print dessert.name
+
+for dessert in Dessert.query.filter_by(name='cake'):
+    print dessert.name
+```
+
 
 ## Are You Sure?
 
@@ -328,6 +355,8 @@ Add a new field to `Dessert`, `image_url`, that you can use to save the URL to a
 Also, dive into the Bootstrap world and see if you can make the whole thing look nicer.
 
 If things like the decimal point formatting of prices has been annoying you, look at some of the Jinja options, [like this one](http://stackoverflow.com/questions/12681036/is-there-a-direct-approach-to-format-numbers-in-jinja2).
+
+How about a [favicon](http://flask.pocoo.org/docs/0.10/patterns/favicon/)?
 
 ## Ordering
 
