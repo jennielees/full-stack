@@ -114,8 +114,8 @@ Pick a few of your favorite cities and make a Flask app with two routes:
 How can we hook these up? Well, we can create some links that pre-fill in the right format.
 
 ```
-<a href="/CA/San Francisco">San Francisco, CA</a>
-<a href="/UK/London">London, UK</a>
+<a href="/city/CA/San Francisco">San Francisco, CA</a>
+<a href="/city/UK/London">London, UK</a>
 ```
 
 Your individual city route can work with the usual decorator:
