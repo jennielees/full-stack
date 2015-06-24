@@ -25,12 +25,14 @@ Can you fix the links to open the Spotify playlists properly? (Hint: look for `u
 ## Form Quick Recap
 
 Handy Form Checklist:
+
 * Is the `action` set to the Flask server URL?
 * Is the `method` set to POST?
 * Do the `input` elements have names?
 * Is there a `submit` button?
 
 Handy Flask Checklist:
+
 * Does the route have `methods=['POST']`?
 * Do the names you are getting from `request.form` match the "foo" in `<input name='foo'>` in your HTML?
 * Do you need to do any checks or validation?
@@ -210,6 +212,7 @@ def playlist(username, playlist_id):
 ```
 
 You will need to:
+
 * Change the links in the results page to link to `/playlist/<username>/<playlist_id>`. You can get the username (aka user ID) and playlist ID from the playlist dictionary you already have.
 * Create a method `get_playlist_tracks(username, playlist_id)` that calls the corresponding [Spotify API endpoint](https://developer.spotify.com/web-api/console/get-playlist-tracks/#complete)
 * Return those tracks and render them in the template. (Don't worry about the Javascript part to load more, unless you really want to.)
