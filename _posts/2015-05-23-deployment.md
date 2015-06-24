@@ -116,10 +116,12 @@ wsgiref==0.1.2
 If there are a lot of other entries in this file, your virtualenv probably has a bunch of libraries you installed for other projects. When you deploy to Heroku, it will install all of these, which is pretty unnecessary --  make a clean virtualenv for this project, and freeze again. 
 
 ```
-$ mkvirtualenv venv/musicapp
+$ virtualenv musicapp
 $ source venv/bin/activate
 $ pip install flask requests gunicorn
 ```
+
+Tip! For easier virtualenvs, try [virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/).
 
 Add the `requirements.txt` and `Procfile` to the git repo.
 
